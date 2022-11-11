@@ -49,6 +49,9 @@ public class PlayerInput : MonoBehaviour
             Simon.instance.ChosenColor.Clear();
             Simon.instance.WrittingList.Clear();
             Cam.instance.enterTheSimon(false);
+            
+            
+            Cam.instance.enterTheWindow(false);
         }
         
     }

@@ -7,12 +7,21 @@ using DG.Tweening;
 
 public class Cam : MonoBehaviour
 {
-
-    public GameObject raycast;
     
+    [Header("-------------" +
+            "Camera Disponible sur la scene" +
+            "-------------")]
     public CinemachineVirtualCamera camPlayer;
     public CinemachineVirtualCamera camSimon;
     
+    public CinemachineVirtualCamera camFenetre;
+    
+    [Header("" +
+            "" +
+            "-------------" +
+            "Raycast Pour Simon" +
+            "-------------")]
+    public GameObject raycast;
     public GameObject pos;
     public GameObject head;
 
@@ -44,7 +53,7 @@ public class Cam : MonoBehaviour
             raycast.transform.DORotate(new Vector3(90, 90, 0),
                 2);
             
-            camPlayer.Priority =10;
+            camPlayer.Priority = 5;
             camSimon.Priority = 10;
             Cursor.visible = true;
 
@@ -70,5 +79,26 @@ public class Cam : MonoBehaviour
             //PlayerInput.instance.enabled = true;
         }
         
+    }
+
+
+    public void enterTheWindow(bool verif)
+    {
+        if (verif)
+        {
+            camPlayer.Priority = 5;
+            camFenetre.Priority = 10;
+
+            PlayerMovement.instance.enabled = false;
+            RotationController.instance.enabled = false;
+        }
+        else
+        {
+            camPlayer.Priority = 10;
+            camFenetre.Priority = 5;
+
+            PlayerMovement.instance.enabled = true;
+            RotationController.instance.enabled = true;
+        }
     }
 }

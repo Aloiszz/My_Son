@@ -27,6 +27,7 @@ public class Raycast : MonoBehaviour
         cam = Camera.main;
     }
 
+    private RaycastHit hit;
     void Update()
     {
         
@@ -39,7 +40,7 @@ public class Raycast : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
+            
 
             if (Physics.Raycast(ray,out hit,100,mask))
             {
@@ -51,35 +52,49 @@ public class Raycast : MonoBehaviour
                     Cam.instance.enterTheSimon(true);
                     StartCoroutine(WaitToPlay());
                 }
-                
+                RaycastSimon();
+                RaycastFenetre();
 
-                if (Simon.instance.canClick)
-                {
-                    if (hit.transform.name == "Blue")
-                    {
-                        Simon.instance.WrittingList.Add(1);
-                        Blue.instance.OnClicked();
-                    }
-
-                    else if (hit.transform.name == "Green")
-                    {
-                        Simon.instance.WrittingList.Add(2);
-                        Green.instance.OnClicked();
-                    }
-                
-                    else if (hit.transform.name == "Yellow")
-                    {
-                        Simon.instance.WrittingList.Add(3);
-                        Yellow.instance.OnClicked();
-                    }
-                
-                    else if (hit.transform.name == "Red")
-                    {
-                        Simon.instance.WrittingList.Add(4);
-                        Red.instance.OnClicked();
-                    }
-                }
             }
+        }
+    }
+
+
+    void RaycastSimon()
+    {
+        if (Simon.instance.canClick)
+        {
+            if (hit.transform.name == "Blue")
+            {
+                Simon.instance.WrittingList.Add(1);
+                Blue.instance.OnClicked();
+            }
+
+            else if (hit.transform.name == "Green")
+            {
+                Simon.instance.WrittingList.Add(2);
+                Green.instance.OnClicked();
+            }
+                
+            else if (hit.transform.name == "Yellow")
+            {
+                Simon.instance.WrittingList.Add(3);
+                Yellow.instance.OnClicked();
+            }
+                
+            else if (hit.transform.name == "Red")
+            {
+                Simon.instance.WrittingList.Add(4);
+                Red.instance.OnClicked();
+            }
+        }
+    }
+
+    void RaycastFenetre()
+    {
+        if (hit.transform.name == "Fenetre")
+        {
+            Cam.instance.enterTheWindow(true);
         }
     }
 

@@ -4,7 +4,9 @@
     <list default="true" id="9475af90-c1b4-4370-94c0-245674128855" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.My_Sons_Unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My_Sons_Unity/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Simon/SphereCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Simon/SphereCollider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerCharacter/Cam.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/PlayerCharacter/Cam.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerCharacter/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/PlayerCharacter/PlayerInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerCharacter/Raycast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/PlayerCharacter/Raycast.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +86,7 @@
       <updated>1668118187254</updated>
       <workItem from="1668118190446" duration="9556000" />
       <workItem from="1668153639291" duration="6399000" />
-      <workItem from="1668163309830" duration="4863000" />
+      <workItem from="1668163309830" duration="5805000" />
     </task>
     <servers />
   </component>
