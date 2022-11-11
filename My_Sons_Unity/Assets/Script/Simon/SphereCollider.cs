@@ -8,12 +8,17 @@ public class SphereCollider : MonoBehaviour
 {
     public CanvasGroup Crosshair;
 
+    public List<BoxCollider> Collider;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             CrossHair(true);
+            foreach (var i in Collider)
+            {
+                i.GetComponent<BoxCollider>().enabled = true;
+            }
         }
     }
 
@@ -22,6 +27,10 @@ public class SphereCollider : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             CrossHair(false);
+            foreach (var i in Collider)
+            {
+                i.GetComponent<BoxCollider>().enabled = false;
+            }
         }
     }
 
