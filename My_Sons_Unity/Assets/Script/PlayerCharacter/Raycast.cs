@@ -48,8 +48,8 @@ public class Raycast : MonoBehaviour
                 if (hit.transform.name == "Simon" && !Simon.instance.enterInSimon)
                 {
                     Simon.instance.enterInSimon = true;
-                    Simon.instance.Jouer();
-                    //Cam.instance.enterTheSimon(true);
+                    Cam.instance.enterTheSimon(true);
+                    StartCoroutine(WaitToPlay());
                 }
                 
 
@@ -81,5 +81,11 @@ public class Raycast : MonoBehaviour
                 }
             }
         }
+    }
+
+    IEnumerator WaitToPlay()
+    {
+        yield return new WaitForSeconds(2);
+        Simon.instance.Jouer();
     }
 }

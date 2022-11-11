@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+using Cursor = UnityEngine.Cursor;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -25,7 +27,15 @@ public class PlayerInput : MonoBehaviour
     
     void Update()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        if (!Simon.instance.enterInSimon)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Confined;
+        }
+        
         _rotationController.inputRotationX = Input.GetAxis("Mouse Y");
         _rotationController.inputRotationY = Input.GetAxis("Mouse X");
 
@@ -38,6 +48,7 @@ public class PlayerInput : MonoBehaviour
             Simon.instance.enterInSimon = false;
             Simon.instance.ChosenColor.Clear();
             Simon.instance.WrittingList.Clear();
+            Cam.instance.enterTheSimon(false);
         }
         
     }
