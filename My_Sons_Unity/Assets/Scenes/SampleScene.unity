@@ -1085,6 +1085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 824881704}
   pos: {fileID: 1339085928}
+  head: {fileID: 0}
 --- !u!1 &824881702
 GameObject:
   m_ObjectHideFlags: 0
