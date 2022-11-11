@@ -6,15 +6,13 @@ using DG.Tweening;
 
 public class SphereCollider : MonoBehaviour
 {
-    public CanvasGroup Crosshair;
-
     public List<BoxCollider> Collider;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            CrossHair(true);
+            CanvasManager.instance.CrossHair(true);
             foreach (var i in Collider)
             {
                 i.GetComponent<BoxCollider>().enabled = true;
@@ -26,7 +24,7 @@ public class SphereCollider : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            CrossHair(false);
+            CanvasManager.instance.CrossHair(false);
             foreach (var i in Collider)
             {
                 i.GetComponent<BoxCollider>().enabled = false;
@@ -36,15 +34,5 @@ public class SphereCollider : MonoBehaviour
 
 
 
-    void CrossHair(bool verif)
-    {
-        if (verif)
-        {
-            Crosshair.DOFade(1, 0.2f);
-        }
-        else
-        {
-            Crosshair.DOFade(0, 0.2f);
-        }
-    }
+    
 }

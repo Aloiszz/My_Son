@@ -11,10 +11,20 @@ public class Cam : MonoBehaviour
     [Header("-------------" +
             "Camera Disponible sur la scene" +
             "-------------")]
+    [Header("Player")]
     public CinemachineVirtualCamera camPlayer;
+    public CinemachineVirtualCamera camLookSimon;
+    
+    [Header("Simon")]
     public CinemachineVirtualCamera camSimon;
     
+    [Header("Fenetre")]
     public CinemachineVirtualCamera camFenetre;
+    
+    [Header("Porte")]
+    public CinemachineVirtualCamera camPorte;
+    public CinemachineVirtualCamera camSousPorte;
+    public CinemachineVirtualCamera camSousPorteLookSimon;
     
     [Header("" +
             "" +
@@ -100,5 +110,60 @@ public class Cam : MonoBehaviour
             PlayerMovement.instance.enabled = true;
             RotationController.instance.enabled = true;
         }
+    }
+
+    public void TouchingTheDoor(bool verif)
+    {
+        if (verif)
+        {
+            camPlayer.Priority = 5;
+            camPorte.Priority = 10;
+
+            PlayerMovement.instance.enabled = false;
+            RotationController.instance.enabled = false;
+        }
+        else
+        {
+            camPlayer.Priority = 10;
+            camPorte.Priority = 5;
+
+            PlayerMovement.instance.enabled = true;
+            RotationController.instance.enabled = true;
+        }
+    }
+    
+    public void UnderTheDoor(bool verif)
+    {
+        if (verif)
+        {
+            camPorte.Priority = 5;
+            camSousPorte.Priority = 10;
+
+            PlayerMovement.instance.enabled = false;
+            RotationController.instance.enabled = false;
+        }
+        else
+        {
+            camSousPorteLookSimon.Priority = 10;
+            camSousPorte.Priority = 5;
+
+            PlayerMovement.instance.enabled = true;
+            RotationController.instance.enabled = true;
+        }
+    }
+    bool verif;
+    public void LeaveDoor()
+    {
+        camSousPorte.Priority = 5;
+        camPlayer.Priority = 10;
+        
+        if (!verif)
+        {
+            PlayerMovement.instance.transform.Rotate(0,180,0);
+            verif = true;
+        }
+
+        PlayerMovement.instance.enabled = true;
+        RotationController.instance.enabled = true;
     }
 }

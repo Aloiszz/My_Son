@@ -54,7 +54,7 @@ public class Raycast : MonoBehaviour
                 }
                 RaycastSimon();
                 RaycastFenetre();
-
+                RaycastPorte();
             }
         }
     }
@@ -105,6 +105,15 @@ public class Raycast : MonoBehaviour
         if (hit.transform.name == "Fenetre")
         {
             Cam.instance.enterTheWindow(true);
+        }
+    }
+
+    void RaycastPorte()
+    {
+        if (hit.transform.name == "Porte")
+        {
+            Cam.instance.TouchingTheDoor(true);
+            Porte.instance.touchedDoor = true;
         }
     }
 
