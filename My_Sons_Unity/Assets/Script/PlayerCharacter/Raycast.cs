@@ -7,6 +7,21 @@ public class Raycast : MonoBehaviour
     Camera cam;
     public LayerMask mask;
 
+    
+    
+    public static Raycast instance;
+    private void Awake()
+    {
+        if (instance != null && instance != this) 
+        { 
+            Destroy(this); 
+        } 
+        else 
+        { 
+            instance = this; 
+        } 
+    }
+
     void Start()
     {
         cam = Camera.main;
@@ -28,31 +43,42 @@ public class Raycast : MonoBehaviour
 
             if (Physics.Raycast(ray,out hit,100,mask))
             {
-                //Debug.Log(hit.transform.name);
-                if (hit.transform.name == "Blue")
-                {
-                    Simon.instance.WrittingList.Add(1);
-                    Blue.instance.OnClicked();
-                }
+                Debug.Log(hit.transform.name);
 
-                else if (hit.transform.name == "Green")
+                if (hit.transform.name == "Simon" && !Simon.instance.enterInSimon)
                 {
-                    Simon.instance.WrittingList.Add(2);
-                    Green.instance.OnClicked();
+                    Simon.instance.enterInSimon = true;
+                    Simon.instance.Jouer();
+                    //Cam.instance.enterTheSimon(true);
                 }
                 
-                else if (hit.transform.name == "Yellow")
+
+                if (Simon.instance.canClick)
                 {
-                    Simon.instance.WrittingList.Add(3);
-                    Yellow.instance.OnClicked();
-                }
+                    if (hit.transform.name == "Blue")
+                    {
+                        Simon.instance.WrittingList.Add(1);
+                        Blue.instance.OnClicked();
+                    }
+
+                    else if (hit.transform.name == "Green")
+                    {
+                        Simon.instance.WrittingList.Add(2);
+                        Green.instance.OnClicked();
+                    }
                 
-                else if (hit.transform.name == "Red")
-                {
-                    Simon.instance.WrittingList.Add(4);
-                    Red.instance.OnClicked();
-                }
+                    else if (hit.transform.name == "Yellow")
+                    {
+                        Simon.instance.WrittingList.Add(3);
+                        Yellow.instance.OnClicked();
+                    }
                 
+                    else if (hit.transform.name == "Red")
+                    {
+                        Simon.instance.WrittingList.Add(4);
+                        Red.instance.OnClicked();
+                    }
+                }
             }
         }
     }

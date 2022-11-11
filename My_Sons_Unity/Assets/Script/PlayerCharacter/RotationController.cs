@@ -12,6 +12,22 @@ public class RotationController : MonoBehaviour
     public float inputRotationX;
     public float inputRotationY;
     
+    
+    
+    public static RotationController instance;
+    private void Awake()
+    {
+        if (instance != null && instance != this) 
+        { 
+            Destroy(this); 
+        } 
+        else 
+        { 
+            instance = this; 
+        } 
+    }
+    
+    
     void Update()
     {
         rotationX -= inputRotationX * rotationSpeed * Time.deltaTime;

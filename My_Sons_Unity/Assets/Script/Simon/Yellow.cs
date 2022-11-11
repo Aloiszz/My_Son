@@ -32,7 +32,7 @@ public class Yellow : MonoBehaviour
     }
 
 
-    IEnumerator Color()
+    public IEnumerator Color()
     {
         color.SetVector("_EmissionColor", new Vector4(191,180,0) * 0.5f);
         yield return new WaitForSeconds(0.2f);
@@ -41,5 +41,17 @@ public class Yellow : MonoBehaviour
     void ComeBack()
     {
         gameObject.transform.DOMove(new Vector3(StartPos.transform.position.x, StartPos.transform.position.y, StartPos.transform.position.z), 0.2f);
+    }
+    
+    
+    public IEnumerator LostGame()
+    {
+        color.SetVector("_EmissionColor", new Vector4(191,180,0) * 0.5f);
+        yield return new WaitForSeconds(0.2f);
+        color.SetVector("_EmissionColor", new Vector4(191,180,0) * 0.05f);
+        yield return new WaitForSeconds(0.2f);
+        color.SetVector("_EmissionColor", new Vector4(191,180,0) * 0.5f);
+        yield return new WaitForSeconds(0.2f);
+        color.SetVector("_EmissionColor", new Vector4(191,180,0) * 0.05f);
     }
 }
