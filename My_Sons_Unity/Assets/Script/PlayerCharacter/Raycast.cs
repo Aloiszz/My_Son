@@ -31,8 +31,28 @@ public class Raycast : MonoBehaviour
                 //Debug.Log(hit.transform.name);
                 if (hit.transform.name == "Blue")
                 {
-                    Debug.Log("Ta mere");
+                    Simon.instance.WrittingList.Add(1);
+                    Blue.instance.OnClicked();
                 }
+
+                else if (hit.transform.name == "Green")
+                {
+                    Simon.instance.WrittingList.Add(2);
+                    Green.instance.OnClicked();
+                }
+                
+                else if (hit.transform.name == "Yellow")
+                {
+                    Simon.instance.WrittingList.Add(3);
+                    Yellow.instance.OnClicked();
+                }
+                
+                else if (hit.transform.name == "Red")
+                {
+                    Simon.instance.WrittingList.Add(4);
+                    Red.instance.OnClicked();
+                }
+                
             }
         }
     }
