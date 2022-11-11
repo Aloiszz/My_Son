@@ -32,7 +32,7 @@ public class Simon : MonoBehaviour
 
     private void Start()
     {
-        coll = GetComponent<BoxCollider>();
+        //coll = GetComponent<BoxCollider>();
         //Jouer();
     }
     
@@ -41,12 +41,12 @@ public class Simon : MonoBehaviour
 
         if (enterInSimon)
         {
-            coll.size = new Vector3(1,1f,1);
+            coll.size = new Vector3(0.703684f,0.08799999f,0.6f);
             coll.center = new Vector3(0, 0, 0);
         }
         else
         {
-            coll.size = new Vector3(1,1.5f,1);
+            coll.size = new Vector3(0.703684f,1f,0.6f);
             coll.center = new Vector3(0, 0.3f, 0);
         }
         
@@ -58,7 +58,7 @@ public class Simon : MonoBehaviour
     {
         for (int i = 0; i < 4; i++)
         {
-            var k = Random.Range(1,4);
+            var k = Random.Range(1,6);
             ChosenColor.Add(k);
             
         }
@@ -70,7 +70,7 @@ public class Simon : MonoBehaviour
         canClick = false;
         foreach (var i in ChosenColor)
         {
-            var number = ChosenColor[i];
+            //var number = ChosenColor[i];
 
             if (i == 1) //blue
             {
@@ -87,6 +87,14 @@ public class Simon : MonoBehaviour
             else if (i == 4)//Red
             {
                 StartCoroutine(Red.instance.Color());
+            }
+            else if (i == 5)//Cyan
+            {
+                StartCoroutine(Cyan.instance.Color());
+            }
+            else if (i == 6)//Purple
+            {
+                StartCoroutine(Purple.instance.Color());
             }
             yield return new WaitForSeconds(0.5f);
         }

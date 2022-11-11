@@ -64,28 +64,38 @@ public class Raycast : MonoBehaviour
     {
         if (Simon.instance.canClick)
         {
-            if (hit.transform.name == "Blue")
+            if (hit.transform.name == "Btn_Blue")
             {
                 Simon.instance.WrittingList.Add(1);
                 Blue.instance.OnClicked();
             }
 
-            else if (hit.transform.name == "Green")
+            else if (hit.transform.name == "Btn_Green")
             {
                 Simon.instance.WrittingList.Add(2);
                 Green.instance.OnClicked();
             }
                 
-            else if (hit.transform.name == "Yellow")
+            else if (hit.transform.name == "Btn_Yellow")
             {
                 Simon.instance.WrittingList.Add(3);
                 Yellow.instance.OnClicked();
             }
                 
-            else if (hit.transform.name == "Red")
+            else if (hit.transform.name == "Btn_Red")
             {
                 Simon.instance.WrittingList.Add(4);
                 Red.instance.OnClicked();
+            }
+            else if (hit.transform.name == "Btn_Cyan")
+            {
+                Simon.instance.WrittingList.Add(5);
+                Cyan.instance.OnClicked();
+            }
+            else if (hit.transform.name == "Btn_Purple")
+            {
+                Simon.instance.WrittingList.Add(6);
+                Purple.instance.OnClicked();
             }
         }
     }

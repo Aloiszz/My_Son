@@ -11,6 +11,11 @@ public class Blue : MonoBehaviour
     
     public Material color;
     
+    [Header("Emmissive")]
+    public Vector4 vec = new Vector4(0,11,191);
+    public float minEmissive = 0.05f;
+    public float maxEmissive = 0.5f;
+    
     public static Blue instance;
     private void Awake()
     {
@@ -35,9 +40,9 @@ public class Blue : MonoBehaviour
 
     public IEnumerator Color()
     {
-        color.SetVector("_EmissionColor", new Vector4(0,11,191) * 0.5f);
+        color.SetVector("_EmissionColor", vec * maxEmissive);
         yield return new WaitForSeconds(0.2f);
-        color.SetVector("_EmissionColor", new Vector4(0,11,191) * 0.05f);
+        color.SetVector("_EmissionColor", vec * minEmissive);
     }
 
     void ComeBack()
@@ -47,12 +52,12 @@ public class Blue : MonoBehaviour
 
     public IEnumerator LostGame()
     {
-        color.SetVector("_EmissionColor", new Vector4(0,11,191) * 0.5f);
+        color.SetVector("_EmissionColor", vec * maxEmissive);
         yield return new WaitForSeconds(0.2f);
-        color.SetVector("_EmissionColor", new Vector4(0,11,191) * 0.05f);
+        color.SetVector("_EmissionColor", vec * minEmissive);
         yield return new WaitForSeconds(0.2f);
-        color.SetVector("_EmissionColor", new Vector4(0,11,191) * 0.5f);
+        color.SetVector("_EmissionColor", vec * maxEmissive);
         yield return new WaitForSeconds(0.2f);
-        color.SetVector("_EmissionColor", new Vector4(0,11,191) * 0.05f);
+        color.SetVector("_EmissionColor", vec * minEmissive);
     }
 }
