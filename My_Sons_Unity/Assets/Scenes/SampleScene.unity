@@ -238,8 +238,9 @@ MonoBehaviour:
   EndPos: {fileID: 62763322}
   color: {fileID: 2100000, guid: f78527295c7abd841857b2386597a0b1, type: 2}
   vec: {x: 0, y: 191, z: 71, w: 0}
-  minEmissive: 0.05
-  maxEmissive: 0.5
+  minEmissive: 0.02
+  maxEmissive: 0.2
+  TimeToLight: 0.2
 --- !u!1 &33496641
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,6 +285,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 324b58e666ce1704a8c628f95ee17d30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSimonSlow: 0
+  isSimonExcite: 1
+  TimeToLight: 0.2
 --- !u!4 &33496644
 Transform:
   m_ObjectHideFlags: 0
@@ -683,7 +687,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -825,6 +829,7 @@ MonoBehaviour:
   vec: {x: 191, y: 180, z: 0, w: 0}
   minEmissive: 0.05
   maxEmissive: 0.5
+  TimeToLight: 0.2
 --- !u!1 &163873517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,8 +1111,9 @@ MonoBehaviour:
   EndPos: {fileID: 495957995}
   color: {fileID: 2100000, guid: 25b005752d4b8c74f83ff54ca2b8231f, type: 2}
   vec: {x: 0, y: 11, z: 191, w: 0}
-  minEmissive: 0.05
-  maxEmissive: 0.5
+  minEmissive: 0.02
+  maxEmissive: 0.2
+  TimeToLight: 0.2
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,6 +1383,7 @@ MonoBehaviour:
   vec: {x: 0, y: 191, z: 6, w: 0}
   minEmissive: 0.05
   maxEmissive: 0.5
+  TimeToLight: 0.2
 --- !u!1 &345464600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1620,8 +1627,9 @@ MonoBehaviour:
   EndPos: {fileID: 1498927086}
   color: {fileID: 2100000, guid: 5c26ef3398a6f0e41b509333b67b2147, type: 2}
   vec: {x: 58, y: 0, z: 191, w: 0}
-  minEmissive: 0.05
-  maxEmissive: 0.5
+  minEmissive: 0.02
+  maxEmissive: 0.2
+  TimeToLight: 0.2
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2944,6 +2952,7 @@ MonoBehaviour:
   vec: {x: 0, y: 11, z: 191, w: 0}
   minEmissive: 0.05
   maxEmissive: 0.5
+  TimeToLight: 0.2
 --- !u!1 &893795280
 GameObject:
   m_ObjectHideFlags: 0
@@ -3342,8 +3351,9 @@ MonoBehaviour:
   EndPos: {fileID: 1075381411}
   color: {fileID: 2100000, guid: c12063effc8ca734eb68259b7936f3cc, type: 2}
   vec: {x: 0, y: 191, z: 6, w: 0}
-  minEmissive: 0.05
-  maxEmissive: 0.5
+  minEmissive: 0.02
+  maxEmissive: 0.2
+  TimeToLight: 0.2
 --- !u!1 &1116409525
 GameObject:
   m_ObjectHideFlags: 3
@@ -4951,6 +4961,7 @@ MonoBehaviour:
   vec: {x: 191, y: 0, z: 4, w: 0}
   minEmissive: 0.05
   maxEmissive: 0.5
+  TimeToLight: 0.2
 --- !u!1 &1881448010
 GameObject:
   m_ObjectHideFlags: 0
@@ -5066,8 +5077,9 @@ MonoBehaviour:
   EndPos: {fileID: 2051867914}
   color: {fileID: 2100000, guid: c614da6ee07865841a421fe43f9a6f92, type: 2}
   vec: {x: 191, y: 0, z: 4, w: 0}
-  minEmissive: 0.05
-  maxEmissive: 0.5
+  minEmissive: 0.02
+  maxEmissive: 0.2
+  TimeToLight: 0.2
 --- !u!1 &1889035490
 GameObject:
   m_ObjectHideFlags: 0
@@ -5890,6 +5902,8 @@ MonoBehaviour:
   tourDeJeu: 4
   NombreDeGameActuel: 0
   NombreDeGamePourExit: 3
+  tempsEntreCouleurs: 1.1
+  TimeToLight: 0.4
   coll: {fileID: 8955009153140054500}
   enterInSimon: 0
   canClick: 0
@@ -6486,8 +6500,9 @@ MonoBehaviour:
   EndPos: {fileID: 1592497964}
   color: {fileID: 2100000, guid: 24b6b392ffada0747a04ab589474bcde, type: 2}
   vec: {x: 191, y: 180, z: 0, w: 0}
-  minEmissive: 0.05
-  maxEmissive: 0.5
+  minEmissive: 0.02
+  maxEmissive: 0.2
+  TimeToLight: 0.2
 --- !u!4 &7142933969607354083
 Transform:
   m_ObjectHideFlags: 0

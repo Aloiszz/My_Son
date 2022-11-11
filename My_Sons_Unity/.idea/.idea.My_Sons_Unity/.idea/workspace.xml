@@ -3,13 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="9475af90-c1b4-4370-94c0-245674128855" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.My_Sons_Unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My_Sons_Unity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CinemachineBlenderSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CinemachineBlenderSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/GameManager/CanvasManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GameManager/CanvasManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerCharacter/Cam.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/PlayerCharacter/Cam.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GameManager/EventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GameManager/EventManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerCharacter/Raycast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/PlayerCharacter/Raycast.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Simon/SphereCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Simon/SphereCollider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Simon/Blue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Simon/Blue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Simon/Cyan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Simon/Cyan.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Simon/Green.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Simon/Green.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Simon/Purple.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Simon/Purple.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Simon/Red.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Simon/Red.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Simon/Simon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Simon/Simon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Simon/Yellow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Simon/Yellow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/materials/M_Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/materials/M_Blue.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/materials/M_Cyan.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/materials/M_Cyan.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/materials/M_Green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/materials/M_Green.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/materials/M_Purple.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/materials/M_Purple.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/materials/M_Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/materials/M_Red.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/materials/M_Yellow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/materials/M_Yellow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +103,7 @@
       <updated>1668118187254</updated>
       <workItem from="1668118190446" duration="9556000" />
       <workItem from="1668153639291" duration="6399000" />
-      <workItem from="1668163309830" duration="23646000" />
+      <workItem from="1668163309830" duration="27496000" />
     </task>
     <servers />
   </component>

@@ -15,6 +15,9 @@ public class Red : MonoBehaviour
     public float minEmissive = 0.05f;
     public float maxEmissive = 0.5f;
     
+    [Header("Timing")] 
+    public float TimeToLight = 0.2f;
+    
     public static Red instance;
     private void Awake()
     {
@@ -28,18 +31,21 @@ public class Red : MonoBehaviour
         } 
     }
 
-
+    public void MinEmissive()
+    {
+        color.SetVector("_EmissionColor", vec * minEmissive);
+    }
 
     public void OnClicked()
     {
         gameObject.transform.DOMove(new Vector3(EndPos.transform.position.x, EndPos.transform.position.y, EndPos.transform.position.z), 0.2f).OnComplete(()=>ComeBack());
-        StartCoroutine(Color());
+        StartCoroutine(Color(TimeToLight));
     }
 
-    public IEnumerator Color()
+    public IEnumerator Color(float time)
     {
         color.SetVector("_EmissionColor", vec * maxEmissive);
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(time);
         color.SetVector("_EmissionColor", vec * minEmissive);
     }
 
