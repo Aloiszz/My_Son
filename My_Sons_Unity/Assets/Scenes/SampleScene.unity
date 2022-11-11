@@ -3292,7 +3292,7 @@ GameObject:
   m_Layer: 0
   m_Name: StartPosYellow
   m_TagString: Untagged
-  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3778,7 +3778,7 @@ GameObject:
   m_Layer: 0
   m_Name: EndPosYellow
   m_TagString: Untagged
-  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4984,6 +4984,7 @@ MonoBehaviour:
   colorList: 01000000020000000300000004000000
   ChosenColor: 
   WrittingList: 
+  tourDeJeu: 4
   coll: {fileID: 8955009153140054500}
   enterInSimon: 0
   canClick: 0

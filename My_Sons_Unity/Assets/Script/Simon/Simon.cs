@@ -11,6 +11,8 @@ public class Simon : MonoBehaviour
     public List<int> ChosenColor;
     public List<int> WrittingList;
 
+    public int tourDeJeu = 4;
+
     public BoxCollider coll;
 
     [Header("evenemeent")] 
@@ -56,7 +58,7 @@ public class Simon : MonoBehaviour
 
     public void Jouer()
     {
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < tourDeJeu; i++)
         {
             var k = Random.Range(1,6);
             ChosenColor.Add(k);
@@ -110,6 +112,7 @@ public class Simon : MonoBehaviour
                 Debug.Log("perdu");
                 ChosenColor.Clear();
                 WrittingList.Clear();
+                tourDeJeu = 4;
                 StartCoroutine(Perdu());
             }
             else
@@ -118,7 +121,8 @@ public class Simon : MonoBehaviour
                 {
                     ChosenColor.Clear();
                     WrittingList.Clear();
-                    Jouer();
+                    tourDeJeu++;
+                    StartCoroutine(Gagner());
                 }
             }
 
@@ -132,7 +136,13 @@ public class Simon : MonoBehaviour
         StartCoroutine(Red.instance.LostGame());
         StartCoroutine(Green.instance.LostGame());
         
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.5f);
+        Jouer();
+    }
+
+    IEnumerator Gagner()
+    {
+        yield return new WaitForSeconds(.7f);
         Jouer();
     }
     

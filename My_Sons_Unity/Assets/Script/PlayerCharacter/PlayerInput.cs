@@ -43,7 +43,7 @@ public class PlayerInput : MonoBehaviour
         _playerMovement.verticalInput = Input.GetAxis("Vertical");
 
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Simon.instance.enterInSimon = false;
             Simon.instance.ChosenColor.Clear();
