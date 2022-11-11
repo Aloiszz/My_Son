@@ -43,12 +43,14 @@ public class PlayerInput : MonoBehaviour
         _playerMovement.verticalInput = Input.GetAxis("Vertical");
 
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && Simon.instance.canSpace)
         {
             Simon.instance.enterInSimon = false;
             Simon.instance.ChosenColor.Clear();
             Simon.instance.WrittingList.Clear();
+            Simon.instance.NombreDeGameActuel = 0;
             Cam.instance.enterTheSimon(false);
+            CanvasManager.instance.SpaceUiVisible(false);
             
             
             Cam.instance.enterTheWindow(false);

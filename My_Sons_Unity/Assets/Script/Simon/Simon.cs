@@ -13,11 +13,17 @@ public class Simon : MonoBehaviour
 
     public int tourDeJeu = 4;
 
+    public int NombreDeGameActuel = 0;
+    public int NombreDeGamePourExit = 3;
+
+    
+
     public BoxCollider coll;
 
     [Header("evenemeent")] 
     public bool enterInSimon;
     public bool canClick;
+    public bool canSpace;
 
     public static Simon instance;
     private void Awake()
@@ -40,6 +46,24 @@ public class Simon : MonoBehaviour
     
     private void Update()
     {
+        
+
+        if (NombreDeGameActuel >= NombreDeGamePourExit)
+        {
+            CanvasManager.instance.SpaceUiVisible(true);
+            canSpace = true;
+        }
+        else
+        {
+            if (!enterInSimon)
+            {
+                canSpace = true;
+            }
+            else
+            {
+                canSpace = false;
+            }
+        }
 
         if (enterInSimon)
         {
@@ -64,6 +88,8 @@ public class Simon : MonoBehaviour
             ChosenColor.Add(k);
             
         }
+
+        NombreDeGameActuel++;
         StartCoroutine(AfficheColor());
     }
 
