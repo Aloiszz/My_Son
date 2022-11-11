@@ -28,7 +28,7 @@ public class Cam : MonoBehaviour
     
     private void Start()
     {
-        cam.transform.DOMove(new Vector3(pos.transform.position.x, pos.transform.position.y, pos.transform.position.z),
+        /*cam.transform.DOMove(new Vector3(pos.transform.position.x, pos.transform.position.y, pos.transform.position.z),
             2);
         cam.transform.DORotate(new Vector3(90, 90, 0),
             2);
@@ -36,7 +36,7 @@ public class Cam : MonoBehaviour
 
         PlayerMovement.instance.enabled = false;
         RotationController.instance.enabled = false;
-        PlayerInput.instance.enabled = false;
+        PlayerInput.instance.enabled = false;*/
     }
     
     public void enterTheSimon(bool verif)
