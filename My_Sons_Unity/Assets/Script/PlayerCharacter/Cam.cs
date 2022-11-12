@@ -106,9 +106,6 @@ public class Cam : MonoBehaviour
         {
             camPlayer.Priority = 10;
             camFenetre.Priority = 5;
-
-            PlayerMovement.instance.enabled = true;
-            RotationController.instance.enabled = true;
         }
     }
 
@@ -126,9 +123,6 @@ public class Cam : MonoBehaviour
         {
             camPlayer.Priority = 10;
             camPorte.Priority = 5;
-
-            PlayerMovement.instance.enabled = true;
-            RotationController.instance.enabled = true;
         }
     }
     
@@ -144,18 +138,16 @@ public class Cam : MonoBehaviour
         }
         else
         {
+            //Simon.instance.source.PlayOneShot(Simon.instance.clipPetageDeCable, 0.5f);
             camSousPorteLookSimon.Priority = 10;
             camSousPorte.Priority = 5;
-
-            PlayerMovement.instance.enabled = true;
-            RotationController.instance.enabled = true;
         }
     }
     bool verif;
     public void LeaveDoor()
     {
-        camSousPorte.Priority = 5;
         camPlayer.Priority = 10;
+        camSousPorteLookSimon.Priority = 5;
         
         if (!verif)
         {

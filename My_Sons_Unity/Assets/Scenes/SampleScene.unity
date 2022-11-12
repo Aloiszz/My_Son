@@ -287,7 +287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSimonSlow: 0
   isSimonExcite: 0
-  isSimonComplique: 1
+  isSimonComplique: 0
   TimeToLight: 0.2
 --- !u!4 &33496644
 Transform:
@@ -10065,7 +10065,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 197418166661116362, guid: aa212dad5c8c75840bdcf44c5a44380f,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 439c7b3420758d24f956431cf90fc504, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -10304,6 +10304,7 @@ MonoBehaviour:
   clipRed: {fileID: 8300000, guid: daa115d1f6607fa438c182c4896fc034, type: 3}
   clipCyan: {fileID: 8300000, guid: 21e68d8d09c8ac3448df409a3261ce85, type: 3}
   clipPurple: {fileID: 8300000, guid: 430111364f721c04bac3fc7554889c79, type: 3}
+  clipPetageDeCable: {fileID: 8300000, guid: 439c7b3420758d24f956431cf90fc504, type: 3}
 --- !u!43 &2080805958
 Mesh:
   m_ObjectHideFlags: 0

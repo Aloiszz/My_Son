@@ -32,38 +32,67 @@ public class EventManager : MonoBehaviour
             isSimonExcite = false;
         }
 
+        if (EventManager.instance.isSimonSlow)
+        {
+            if (Simon.instance.NombreDeGameActuel >= Simon.instance.NombreDeGamePourExit)
+            {
+                EventManager.instance.SimonDevientLent(false);
+                instance.isSimonSlow = false;
+            }
+        }
+        
 
-        if (Simon.instance.tourDeJeuActuel >= 5)
+        if (isSimonComplique)
         {
-            Simon.instance.tempsEntreCouleurs = 0.6f;
-            Simon.instance.TimeToLight = 0.25f;
-        }
-
-        if (Simon.instance.tourDeJeuActuel >= 10)
-        {
-            Simon.instance.tempsEntreCouleurs = 0.45f;
-            Simon.instance.TimeToLight = 0.2f;
-        }
-        if (Simon.instance.tourDeJeuActuel >= 15)
-        {
-            Simon.instance.tempsEntreCouleurs = 0.2f;
-            Simon.instance.TimeToLight = 0.1f;
-        }
-        if (Simon.instance.tourDeJeuActuel >= 10)
-        {
-            Simon.instance.tempsEntreCouleurs = 0.1f;
-            Simon.instance.TimeToLight = 0.1f;
+            if (Simon.instance.tourDeJeuActuel >= 5)
+            {
+                Simon.instance.tempsEntreCouleurs = 0.6f;
+                Simon.instance.TimeToLight = 0.25f;
+            }
+            if (Simon.instance.tourDeJeuActuel >= 10)
+            {
+                Simon.instance.tempsEntreCouleurs = 0.45f;
+                Simon.instance.TimeToLight = 0.2f;
+            }
+            if (Simon.instance.tourDeJeuActuel >= 15)
+            {
+                Simon.instance.tempsEntreCouleurs = 0.2f;
+                Simon.instance.TimeToLight = 0.1f;
+            }
+            if (Simon.instance.tourDeJeuActuel >= 10)
+            {
+                Simon.instance.tempsEntreCouleurs = 0.1f;
+                Simon.instance.TimeToLight = 0.1f;
+            }
+            if (Simon.instance.tourDeJeuActuel == Simon.instance.tourDeJeu-2)
+            {
+                Simon.instance.tempsEntreCouleurs = 2f;
+                Simon.instance.TimeToLight = 0.8f;
+            }
+            if (Simon.instance.tourDeJeuActuel == Simon.instance.tourDeJeu-1)
+            {
+                Simon.instance.tempsEntreCouleurs = 1.1f;
+                Simon.instance.TimeToLight = 0.4f;
+                isSimonComplique = false;
+            }
         }
     }
 
 
-    public void SimonDevientLent()
+    public void SimonDevientLent(bool verif)
     {
         //var memoryTempsEntreCouleurs = Simon.instance.tempsEntreCouleurs;
         //var memoryTimeToLight = Simon.instance.TimeToLight;
-
-        Simon.instance.tempsEntreCouleurs = Random.Range(.5f,3);
-        Simon.instance.TimeToLight = Random.Range(1, 4);
+        if (verif)
+        {
+            Simon.instance.tempsEntreCouleurs = Random.Range(.5f,3);
+            Simon.instance.TimeToLight = Random.Range(1, 4);
+        }
+        else
+        {
+            Simon.instance.tempsEntreCouleurs = 1.1f;
+            Simon.instance.TimeToLight = 0.4f;
+        }
     }
 
     public void SimonExcite()

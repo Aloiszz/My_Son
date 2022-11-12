@@ -25,6 +25,7 @@ public class Raycast : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
+        MinEmissive();
     }
 
     private RaycastHit hit;
@@ -132,7 +133,7 @@ public class Raycast : MonoBehaviour
         if (EventManager.instance.isSimonComplique)
         {
             EventManager.instance.SimonComplique();
-            EventManager.instance.isSimonComplique = false;
+            //EventManager.instance.isSimonComplique = false;
         }
         else
         {

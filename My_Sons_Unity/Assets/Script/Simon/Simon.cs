@@ -41,6 +41,7 @@ public class Simon : MonoBehaviour
     public AudioClip clipRed;
     public AudioClip clipCyan;
     public AudioClip clipPurple;
+    public AudioClip clipPetageDeCable;
 
     public static Simon instance;
     private void Awake()
@@ -103,9 +104,8 @@ public class Simon : MonoBehaviour
             ChosenColor.Add(k);
             if (EventManager.instance.isSimonSlow)
             {
-                EventManager.instance.SimonDevientLent();
+                EventManager.instance.SimonDevientLent(true);
             }
-            
         }
         NombreDeGameActuel++;
         StartCoroutine(AfficheColor());
@@ -167,6 +167,7 @@ public class Simon : MonoBehaviour
                 Debug.Log("perdu");
                 ChosenColor.Clear();
                 WrittingList.Clear();
+                tourDeJeuActuel = 0;
                 tourDeJeu = 4;
                 StartCoroutine(Perdu());
             }
