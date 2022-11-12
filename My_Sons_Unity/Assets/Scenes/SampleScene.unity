@@ -287,6 +287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSimonSlow: 0
   isSimonExcite: 0
+  isSimonComplique: 1
   TimeToLight: 0.2
 --- !u!4 &33496644
 Transform:
@@ -10061,7 +10062,8 @@ AudioSource:
   m_GameObject: {fileID: 2070676381}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 197418166661116362, guid: aa212dad5c8c75840bdcf44c5a44380f,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 439c7b3420758d24f956431cf90fc504, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -10286,6 +10288,7 @@ MonoBehaviour:
   ChosenColor: 
   WrittingList: 
   tourDeJeu: 4
+  tourDeJeuActuel: 0
   NombreDeGameActuel: 0
   NombreDeGamePourExit: 3
   tempsEntreCouleurs: 1.1
