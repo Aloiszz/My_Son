@@ -42,6 +42,7 @@ public class Simon : MonoBehaviour
     public AudioClip clipCyan;
     public AudioClip clipPurple;
     public AudioClip clipPetageDeCable;
+    public AudioClip clipRespiration;
     
 
     public static Simon instance;
