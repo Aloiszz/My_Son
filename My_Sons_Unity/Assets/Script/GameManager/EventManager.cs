@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEditor.Rendering;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -13,8 +14,10 @@ public class EventManager : MonoBehaviour
     public bool isSimonComplique;
     public bool isSimonEND;
 
-
+    [Header("Ending")]
     public float TimeForFoot = 1.25f;
+    public float TimeBeforeEnd = .8f;
+    public float TImeBeforeBlack = 6.5f;
     public List<GameObject> piedDuDaron;
 
 
@@ -189,6 +192,12 @@ public class EventManager : MonoBehaviour
         yield return new WaitForSeconds(TimeForFoot);
         piedDuDaron[3].SetActive(true);
         piedDuDaron[4].SetActive(true);
-        
+        Simon.instance.source.PlayOneShot(Simon.instance.clipRespiration, 0.7f);
+        yield return new WaitForSeconds(TImeBeforeBlack);
+        CanvasManager.instance.CG_Crosshair.DOFade(0, 0);
+        CanvasManager.instance.CG_Space.DOFade(0, 0);
+        CanvasManager.instance.CG_Panel.DOFade(1, 0);
+        yield return new WaitForSeconds(TimeBeforeEnd);
+        Simon.instance.source.PlayOneShot(Simon.instance.clipEnd, 3);
     }
 }
