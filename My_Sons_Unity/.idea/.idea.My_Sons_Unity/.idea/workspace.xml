@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9475af90-c1b4-4370-94c0-245674128855" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.My_Sons_Unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My_Sons_Unity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/NewAudioMixer.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/NewAudioMixer.mixer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Commode/Commode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Commode/Commode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/GameManager/EventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GameManager/EventManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerCharacter/Raycast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/PlayerCharacter/Raycast.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Simon/Simon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Simon/Simon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Test Enzo/MoveVoiture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Test Enzo/MoveVoiture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/materials/M_Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/materials/M_Blue.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-    </list>
+    <list default="true" id="9475af90-c1b4-4370-94c0-245674128855" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
