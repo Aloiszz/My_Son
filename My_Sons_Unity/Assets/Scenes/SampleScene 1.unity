@@ -274,6 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CG_Space: {fileID: 1758117117}
   CG_Crosshair: {fileID: 1219673863}
+  CG_Panel: {fileID: 0}
 --- !u!114 &33496643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,6 +290,11 @@ MonoBehaviour:
   isSimonSlow: 0
   isSimonExcite: 0
   isSimonComplique: 0
+  isSimonEND: 0
+  TimeForFoot: 1.25
+  TimeBeforeEnd: 0.8
+  TImeBeforeBlack: 6.5
+  piedDuDaron: []
   TimeToLight: 0.2
 --- !u!4 &33496644
 Transform:
@@ -319,8 +325,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPorteVisible: 0
   isFenetreVisible: 0
+  isCommodeVisible: 0
   Porte: {fileID: 919132147524640561}
   Fenetre: {fileID: 1190394935}
+  RemplaceFenetre: {fileID: 0}
+  Commode: {fileID: 0}
 --- !u!1 &62763322
 GameObject:
   m_ObjectHideFlags: 0
@@ -6889,6 +6898,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f214c1ae7b4f3f346a67d6cad8ff5c0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  source: {fileID: 0}
+  voiture: {fileID: 0}
 --- !u!1 &1190518630
 GameObject:
   m_ObjectHideFlags: 0
@@ -11404,7 +11415,10 @@ MonoBehaviour:
   clipRed: {fileID: 8300000, guid: daa115d1f6607fa438c182c4896fc034, type: 3}
   clipCyan: {fileID: 8300000, guid: 21e68d8d09c8ac3448df409a3261ce85, type: 3}
   clipPurple: {fileID: 8300000, guid: 430111364f721c04bac3fc7554889c79, type: 3}
-  clipPetageDeCable: {fileID: 8300000, guid: 439c7b3420758d24f956431cf90fc504, type: 3}
+  clipSimonExcite_1: {fileID: 0}
+  clipSimonExcite_2: {fileID: 0}
+  clipRespiration: {fileID: 0}
+  clipEnd: {fileID: 0}
 --- !u!43 &2080805958
 Mesh:
   m_ObjectHideFlags: 0
@@ -11980,9 +11994,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   touchedDoor: 0
   CollisionCrosshair: {fileID: 913546174}
+  poigner: {fileID: 0}
   WaitTimePoigner: 4
   WaitTimeUnderTheDoor: 6
   WaitTimeLeaveDoor: 2
+  source: {fileID: 0}
+  poigneDePorte: {fileID: 0}
+  clipGreen: {fileID: 0}
 --- !u!82 &919132147524640565
 AudioSource:
   m_ObjectHideFlags: 0
