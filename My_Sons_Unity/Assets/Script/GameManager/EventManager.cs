@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,8 +10,14 @@ public class EventManager : MonoBehaviour
 
     public bool isSimonSlow;
     public bool isSimonExcite; 
-    public bool isSimonComplique; 
-    
+    public bool isSimonComplique;
+    public bool isSimonEND;
+
+
+    public float TimeForFoot = 1.25f;
+    public List<GameObject> piedDuDaron;
+
+
     public static EventManager instance;
     private void Awake()
     {
@@ -21,7 +28,13 @@ public class EventManager : MonoBehaviour
         else 
         { 
             instance = this; 
-        } 
+        }
+
+
+        foreach (var i in piedDuDaron)
+        {
+            i.SetActive(false);
+        }
     }
 
     public void Update()
@@ -39,6 +52,12 @@ public class EventManager : MonoBehaviour
                 EventManager.instance.SimonDevientLent(false);
                 instance.isSimonSlow = false;
             }
+        }
+
+        if (isSimonEND)
+        {
+            SimonEND();
+            isSimonEND = false;
         }
         
 
@@ -147,5 +166,29 @@ public class EventManager : MonoBehaviour
     {
         Simon.instance.tourDeJeu = 40;
         Simon.instance.Jouer();
+    }
+
+
+    public void SimonEND()
+    {
+        StartCoroutine(Walk());
+    }
+
+    IEnumerator Walk()
+    {
+        piedDuDaron[0].SetActive(true);
+        yield return new WaitForSeconds(TimeForFoot);
+        piedDuDaron[0].SetActive(false);
+        piedDuDaron[1].SetActive(true);
+        yield return new WaitForSeconds(TimeForFoot);
+        piedDuDaron[1].SetActive(false);
+        piedDuDaron[2].SetActive(true);
+        yield return new WaitForSeconds(TimeForFoot);
+        piedDuDaron[2].SetActive(false);
+        piedDuDaron[3].SetActive(true);
+        yield return new WaitForSeconds(TimeForFoot);
+        piedDuDaron[3].SetActive(true);
+        piedDuDaron[4].SetActive(true);
+        
     }
 }

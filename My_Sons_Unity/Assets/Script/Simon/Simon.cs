@@ -88,12 +88,12 @@ public class Simon : MonoBehaviour
 
         if (enterInSimon)
         {
-            coll.size = new Vector3(0.703684f,0.08799999f,0.6f);
+            coll.size = new Vector3(0.55f,0.08799999f,0.48f);
             coll.center = new Vector3(0, 0, 0);
         }
         else
         {
-            coll.size = new Vector3(0.703684f,1f,0.6f);
+            coll.size = new Vector3(0.55f,1f,0.48f);
             coll.center = new Vector3(0, 0.3f, 0);
         }
 
@@ -111,6 +111,7 @@ public class Simon : MonoBehaviour
             {
                 EventManager.instance.SimonDevientLent(true);
             }
+            Debug.Log("ici");
         }
         NombreDeGameActuel++;
         StartCoroutine(AfficheColor());
