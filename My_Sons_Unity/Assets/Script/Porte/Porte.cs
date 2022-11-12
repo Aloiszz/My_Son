@@ -11,7 +11,6 @@ public class Porte : MonoBehaviour
     
     public GameObject CollisionCrosshair;
 
-    //public AudioSource audioSource;
 
 
     [Header("Timing")]
@@ -43,7 +42,7 @@ public class Porte : MonoBehaviour
     {
         if (touchedDoor)
         {
-            //Poignée.instance.Play();
+            //Poignée.instance.Play();      Poignée qui essaye de se tourner, doit se mettre dès que le joueur clique sur la porte et la caméra zoom dessus
             Move.instance.MoveObject();
             Door();
             CollisionCrosshair.SetActive(false);
@@ -63,7 +62,8 @@ public class Porte : MonoBehaviour
         Cam.instance.UnderTheDoor(true);
         
         
-        //AudioSimon.instance.Play();
+        //AudioSimon.instance.Play();      Simon appel le joueur (doit se mettre juste avant que le joueur tourne la tête)
+        
 
         if (!verif)
         {

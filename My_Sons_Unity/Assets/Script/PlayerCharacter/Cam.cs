@@ -102,6 +102,7 @@ public class Cam : MonoBehaviour
             camPlayer.Priority = 5;
             camFenetre.Priority = 10;
 
+            MoveVoiture.instance.MoveObject();
             PlayerMovement.instance.enabled = false;
             RotationController.instance.enabled = false;
         }
