@@ -18,7 +18,7 @@ public class Linear : MonoBehaviour
     public GameObject RemplaceFenetre;
 
     public GameObject Commode;
-    
+    public GameObject Biblot;
     
     public static Linear instance;
     private void Awake()
@@ -37,6 +37,7 @@ public class Linear : MonoBehaviour
     {
         Fenetre.SetActive(false);
         Commode.SetActive(false);
+        Biblot.SetActive(false);
     }
 
 
@@ -55,6 +56,7 @@ public class Linear : MonoBehaviour
         if (isCommodeVisible)
         {
             Commode.SetActive(true);
+            Biblot.SetActive(true);
         }
     }
 }

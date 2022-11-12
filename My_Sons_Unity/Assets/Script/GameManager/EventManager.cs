@@ -184,24 +184,35 @@ public class EventManager : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         piedDuDaron[0].SetActive(true);
+        Simon.instance.source.PlayOneShot(Simon.instance.clipFoot);
         yield return new WaitForSeconds(TimeForFoot);
+        Simon.instance.source.PlayOneShot(Simon.instance.clipFoot);
         piedDuDaron[0].SetActive(false);
         piedDuDaron[1].SetActive(true);
         yield return new WaitForSeconds(TimeForFoot);
+        Simon.instance.source.PlayOneShot(Simon.instance.clipFoot);
         piedDuDaron[1].SetActive(false);
         piedDuDaron[2].SetActive(true);
         yield return new WaitForSeconds(TimeForFoot);
+        Simon.instance.source.PlayOneShot(Simon.instance.clipFoot);
         piedDuDaron[2].SetActive(false);
         piedDuDaron[3].SetActive(true);
         yield return new WaitForSeconds(TimeForFoot);
+        Simon.instance.source.PlayOneShot(Simon.instance.clipFoot);
         piedDuDaron[3].SetActive(true);
         piedDuDaron[4].SetActive(true);
+        
+        
         Simon.instance.source.PlayOneShot(Simon.instance.clipRespiration, 0.7f);
+        
         yield return new WaitForSeconds(TImeBeforeBlack);
+        
         CanvasManager.instance.CG_Crosshair.DOFade(0, 0);
         CanvasManager.instance.CG_Space.DOFade(0, 0);
         CanvasManager.instance.CG_Panel.DOFade(1, 0);
+        
         yield return new WaitForSeconds(TimeBeforeEnd);
+        
         Simon.instance.source.PlayOneShot(Simon.instance.clipEnd, 3);
     }
 }
