@@ -5,9 +5,10 @@ using DG.Tweening;
 
 public class Move : MonoBehaviour
 {
-    public float speed = 6;
+    //public float speed = 6;
     public Transform target;
 
+    public float duree;
     public static Move instance;
 
     private void Awake()
@@ -31,6 +32,6 @@ public class Move : MonoBehaviour
 
     public void MoveObject()
     {
-        transform.DOMove(target.transform.position, 10);
+        transform.DOMove(target.transform.position, duree);
     }
 }
