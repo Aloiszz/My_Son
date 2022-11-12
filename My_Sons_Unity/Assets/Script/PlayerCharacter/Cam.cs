@@ -122,6 +122,7 @@ public class Cam : MonoBehaviour
 
             PlayerMovement.instance.enabled = false;
             RotationController.instance.enabled = false;
+            Move.instance.MoveObject();
         }
         else
         {

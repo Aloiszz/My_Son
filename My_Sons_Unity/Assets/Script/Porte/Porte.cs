@@ -59,9 +59,9 @@ public class Porte : MonoBehaviour
 
     public void Door()
     {
-        
-        source.PlayOneShot(poigneDePorte);
-        poigner.transform.DORotate(new Vector3(95,0,0),1.5f).OnComplete(()=>ComeBack());
+
+        StartCoroutine(Wait1sec());
+
         StartCoroutine(Wait());
         CollisionCrosshair.SetActive(false);
     }
@@ -111,5 +111,13 @@ public class Porte : MonoBehaviour
         
         touchedDoor = false;
         Simon.instance.canSpace = true;
+    }
+
+    IEnumerator Wait1sec()
+    {
+        yield return new WaitForSeconds(1);
+        source.Play();
+        poigner.transform.DORotate(new Vector3(95,0,0),1.5f).OnComplete(()=>ComeBack());
+
     }
 }
