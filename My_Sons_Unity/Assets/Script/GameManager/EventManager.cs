@@ -129,7 +129,7 @@ public class EventManager : MonoBehaviour
     public float TimeToLight = 0.35f;
     IEnumerator AfficheColor()
     {
-        Simon.instance.source.PlayOneShot(Simon.instance.clipSimonExcite_1);
+        //Simon.instance.source.PlayOneShot(Simon.instance.clipSimonExcite_1);
         for (int i = 0; i < 3; i++)
         {
             StartCoroutine(Red.instance.Color(TimeToLight));
@@ -140,7 +140,7 @@ public class EventManager : MonoBehaviour
             StartCoroutine(Cyan.instance.Color(TimeToLight));
             yield return new WaitForSeconds(0.7f);
         }
-        Simon.instance.source.PlayOneShot(Simon.instance.clipSimonExcite_2);
+        //Simon.instance.source.PlayOneShot(Simon.instance.clipSimonExcite_2);
         for (int i = 0; i < 3; i++) 
         {
             StartCoroutine(Red.instance.Color(TimeToLight));
@@ -156,7 +156,7 @@ public class EventManager : MonoBehaviour
             StartCoroutine(Cyan.instance.Color(TimeToLight));
             yield return new WaitForSeconds(0.5f);
         }
-        Simon.instance.source.PlayOneShot(Simon.instance.clipSimonExcite_1);
+        //Simon.instance.source.PlayOneShot(Simon.instance.clipSimonExcite_1);
         for (int i = 0; i < 3; i++)
         {
             StartCoroutine(Red.instance.Color(TimeToLight));
