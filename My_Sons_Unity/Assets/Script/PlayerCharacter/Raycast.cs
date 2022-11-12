@@ -56,6 +56,12 @@ public class Raycast : MonoBehaviour
                     EventManager.instance.StopAllCoroutines();
                     MinEmissive();
                     StartCoroutine(WaitToPlay());
+                    
+                    if (EventManager.instance.isSimonEND)
+                    {
+                        EventManager.instance.SimonEND();
+                        EventManager.instance.isSimonEND = false;
+                    }
                 }
                 RaycastSimon();
                 RaycastFenetre();
@@ -142,6 +148,7 @@ public class Raycast : MonoBehaviour
         if (hit.transform.name == "Commode")
         {
             Cam.instance.EnterLaCommode(true);
+            Commode.instance.Commode_();
             Commode.instance.touchedCommode = true;
         }
     }

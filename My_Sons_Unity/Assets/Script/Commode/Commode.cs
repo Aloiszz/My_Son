@@ -38,7 +38,7 @@ public class Commode : MonoBehaviour
         }
     }
     
-    void Commode_()
+    public void Commode_()
     {
         StartCoroutine(Wait());
         

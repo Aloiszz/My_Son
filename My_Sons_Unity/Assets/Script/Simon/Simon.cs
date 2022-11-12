@@ -64,13 +64,13 @@ public class Simon : MonoBehaviour
     {
         //coll = GetComponent<BoxCollider>();
         Cam.instance.enterTheSimon(true);
-        CanvasManager.instance.CG_Panel.DOFade(0, 14).SetEase(Ease.InQuint);
+        CanvasManager.instance.CG_Panel.DOFade(0, 2).SetEase(Ease.InQuint);
         StartCoroutine(StartTheGame());
     }
 
     IEnumerator StartTheGame()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
         Jouer();
         Simon.instance.enterInSimon = true;
         EventManager.instance.StopAllCoroutines();

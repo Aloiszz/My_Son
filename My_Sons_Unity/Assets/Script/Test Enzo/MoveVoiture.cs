@@ -9,7 +9,10 @@ public class MoveVoiture : MonoBehaviour
     public Transform target;
 
     public static MoveVoiture instance;
-
+    
+    [Header("Sound")] 
+    public AudioSource Source;
+    public AudioClip Voiture;
     private void Awake()
     {
         if (instance != null && instance != this) 
@@ -32,5 +35,6 @@ public class MoveVoiture : MonoBehaviour
     public void MoveObject()
     {
         transform.DOMove(target.transform.position, 10);
+        Source.PlayOneShot(Voiture);
     }
 }
