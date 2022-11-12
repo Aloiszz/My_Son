@@ -8,6 +8,8 @@ public class Porte : MonoBehaviour
     
     public GameObject CollisionCrosshair;
 
+    // public AudioSource audioSource;
+
 
     [Header("Timing")]
     public float WaitTimePoigner = 4f;
@@ -29,7 +31,7 @@ public class Porte : MonoBehaviour
     
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -37,6 +39,7 @@ public class Porte : MonoBehaviour
     {
         if (touchedDoor)
         {
+            //audioSource.Play();
             Door();
             CollisionCrosshair.SetActive(false);
         }
