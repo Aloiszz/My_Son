@@ -8,7 +8,8 @@ public class EventManager : MonoBehaviour
 {
 
     public bool isSimonSlow;
-    public bool isSimonExcite;
+    public bool isSimonExcite; 
+    public bool isSimonComplique; 
     
     public static EventManager instance;
     private void Awake()
@@ -29,6 +30,29 @@ public class EventManager : MonoBehaviour
         {
             SimonExcite();
             isSimonExcite = false;
+        }
+
+
+        if (Simon.instance.tourDeJeuActuel >= 5)
+        {
+            Simon.instance.tempsEntreCouleurs = 0.6f;
+            Simon.instance.TimeToLight = 0.25f;
+        }
+
+        if (Simon.instance.tourDeJeuActuel >= 10)
+        {
+            Simon.instance.tempsEntreCouleurs = 0.45f;
+            Simon.instance.TimeToLight = 0.2f;
+        }
+        if (Simon.instance.tourDeJeuActuel >= 15)
+        {
+            Simon.instance.tempsEntreCouleurs = 0.2f;
+            Simon.instance.TimeToLight = 0.1f;
+        }
+        if (Simon.instance.tourDeJeuActuel >= 10)
+        {
+            Simon.instance.tempsEntreCouleurs = 0.1f;
+            Simon.instance.TimeToLight = 0.1f;
         }
     }
 
@@ -86,5 +110,12 @@ public class EventManager : MonoBehaviour
             yield return new WaitForSeconds(0.7f);
         }
 
+    }
+
+
+    public void SimonComplique()
+    {
+        Simon.instance.tourDeJeu = 40;
+        Simon.instance.Jouer();
     }
 }

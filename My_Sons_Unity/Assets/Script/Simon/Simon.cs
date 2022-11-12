@@ -14,13 +14,14 @@ public class Simon : MonoBehaviour
 
     [Header("Regles")]
     public int tourDeJeu = 4;
+    public int tourDeJeuActuel;
     public int NombreDeGameActuel = 0;
     public int NombreDeGamePourExit = 3;
 
     
     [Header("Timing")]
-    public float tempsEntreCouleurs = 0.5f;
-    public float TimeToLight = 0.2f;
+    public float tempsEntreCouleurs;
+    public float TimeToLight;
     
 
     public BoxCollider coll;
@@ -62,8 +63,6 @@ public class Simon : MonoBehaviour
     
     private void Update()
     {
-        
-
         if (NombreDeGameActuel > NombreDeGamePourExit)
         {
             CanvasManager.instance.SpaceUiVisible(true);
@@ -91,7 +90,7 @@ public class Simon : MonoBehaviour
             coll.size = new Vector3(0.703684f,1f,0.6f);
             coll.center = new Vector3(0, 0.3f, 0);
         }
-        
+
         GameVerification();
     }
     
@@ -100,12 +99,13 @@ public class Simon : MonoBehaviour
     {
         for (int i = 0; i < tourDeJeu; i++)
         {
-            var k = Random.Range(1,6);
+            var k = Random.Range(1,7);
             ChosenColor.Add(k);
             if (EventManager.instance.isSimonSlow)
             {
                 EventManager.instance.SimonDevientLent();
             }
+            
         }
         NombreDeGameActuel++;
         StartCoroutine(AfficheColor());
@@ -137,7 +137,9 @@ public class Simon : MonoBehaviour
             else if (i == 4)//Red
             {
                 StartCoroutine(Red.instance.Color(TimeToLight));
+                source.pitch = 0.2f;
                 source.PlayOneShot(clipRed,0.5f);  
+                source.pitch = 1f;
             }
             else if (i == 5)//Cyan
             {
@@ -149,9 +151,11 @@ public class Simon : MonoBehaviour
                 StartCoroutine(Purple.instance.Color(TimeToLight));
                 source.PlayOneShot(clipPurple,0.5f);  
             }
+            tourDeJeuActuel++;
             yield return new WaitForSeconds(tempsEntreCouleurs);
         }
         canClick = true;
+        
     }
 
     void GameVerification()

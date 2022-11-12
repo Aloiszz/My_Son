@@ -128,7 +128,17 @@ public class Raycast : MonoBehaviour
     IEnumerator WaitToPlay()
     {
         yield return new WaitForSeconds(2);
-        Simon.instance.Jouer();
+        
+        if (EventManager.instance.isSimonComplique)
+        {
+            EventManager.instance.SimonComplique();
+            EventManager.instance.isSimonComplique = false;
+        }
+        else
+        {
+            Simon.instance.Jouer();
+        }
+        
     }
 
 
