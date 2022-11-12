@@ -50,11 +50,13 @@ public class Raycast : MonoBehaviour
                 {
                     Simon.instance.enterInSimon = true;
                     Cam.instance.enterTheSimon(true);
+                    EventManager.instance.StopAllCoroutines();
+                    MinEmissive();
                     StartCoroutine(WaitToPlay());
                 }
                 RaycastSimon();
                 RaycastFenetre();
-
+                RaycastPorte();
             }
         }
     }
@@ -108,9 +110,29 @@ public class Raycast : MonoBehaviour
         }
     }
 
+    void RaycastPorte()
+    {
+        if (hit.transform.name == "Porte")
+        {
+            Cam.instance.TouchingTheDoor(true);
+            Porte.instance.touchedDoor = true;
+        }
+    }
+
     IEnumerator WaitToPlay()
     {
         yield return new WaitForSeconds(2);
         Simon.instance.Jouer();
+    }
+
+
+    void MinEmissive()
+    {
+        Cyan.instance.MinEmissive();
+        Blue.instance.MinEmissive();
+        Red.instance.MinEmissive();
+        Yellow.instance.MinEmissive();
+        Purple.instance.MinEmissive();
+        Green.instance.MinEmissive();
     }
 }
