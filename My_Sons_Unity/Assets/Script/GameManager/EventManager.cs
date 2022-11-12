@@ -96,7 +96,7 @@ public class EventManager : MonoBehaviour
                 Simon.instance.tempsEntreCouleurs = 1.1f;
                 Simon.instance.TimeToLight = 0.4f;
                 isSimonComplique = false;
-                Linear.instance.isFenetreVisible = true;
+                Linear.instance.isCommodeVisible = true;
             }
         }
     }

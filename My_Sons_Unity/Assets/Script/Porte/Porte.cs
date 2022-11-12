@@ -96,7 +96,8 @@ public class Porte : MonoBehaviour
         {
             verif = true;
             EventManager.instance.isSimonExcite = true;
-            EventManager.instance.isSimonComplique = true;
+            //EventManager.instance.isSimonComplique = true;
+            EventManager.instance.isSimonSlow = true;
         }
 
         yield return new WaitForSeconds(WaitTimeUnderTheDoor);

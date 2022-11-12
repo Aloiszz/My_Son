@@ -9,11 +9,15 @@ public class Linear : MonoBehaviour
     [Header("Bool")] 
     public bool isPorteVisible;
     public bool isFenetreVisible;
-    
+    public bool isCommodeVisible;
     
     [Header("Event principaux")] 
     public GameObject Porte;
+    
     public GameObject Fenetre;
+    public GameObject RemplaceFenetre;
+
+    public GameObject Commode;
     
     
     public static Linear instance;
@@ -32,6 +36,7 @@ public class Linear : MonoBehaviour
     private void Start()
     {
         Fenetre.SetActive(false);
+        Commode.SetActive(false);
     }
 
 
@@ -40,10 +45,16 @@ public class Linear : MonoBehaviour
         if (isFenetreVisible)
         {
             Fenetre.SetActive(true);
+            RemplaceFenetre.SetActive(false);
         }
         else
         {
             Fenetre.SetActive(false);
+        }
+
+        if (isCommodeVisible)
+        {
+            Commode.SetActive(true);
         }
     }
 }

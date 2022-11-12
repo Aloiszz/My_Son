@@ -4,7 +4,25 @@ using UnityEngine;
 
 public class Fenetre : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
+    [Header("Sound")] 
+    public AudioSource source;
+    public AudioClip voiture;
+
+
+    public static Fenetre instance;
+    private void Awake()
+    {
+        if (instance != null && instance != this) 
+        { 
+            Destroy(this); 
+        } 
+        else 
+        { 
+            instance = this; 
+        } 
+    }
+    
     void Start()
     {
         
