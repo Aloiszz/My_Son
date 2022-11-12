@@ -18,7 +18,7 @@ public class Cyan : MonoBehaviour
 
     [Header("Timing")] 
     public float TimeToLight = 0.2f;
-    
+
     public static Cyan instance;
     private void Awake()
     {

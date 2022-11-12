@@ -29,6 +29,17 @@ public class Simon : MonoBehaviour
     public bool enterInSimon;
     public bool canClick;
     public bool canSpace;
+    
+    
+    [Header("Sound")] 
+    public AudioSource source;
+
+    public AudioClip clipBlue;
+    public AudioClip clipGreen;
+    public AudioClip clipYellow;
+    public AudioClip clipRed;
+    public AudioClip clipCyan;
+    public AudioClip clipPurple;
 
     public static Simon instance;
     private void Awake()
@@ -53,7 +64,7 @@ public class Simon : MonoBehaviour
     {
         
 
-        if (NombreDeGameActuel >= NombreDeGamePourExit)
+        if (NombreDeGameActuel > NombreDeGamePourExit)
         {
             CanvasManager.instance.SpaceUiVisible(true);
             canSpace = true;
@@ -111,26 +122,32 @@ public class Simon : MonoBehaviour
             if (i == 1) //blue
             {
                 StartCoroutine(Blue.instance.Color(TimeToLight));
+                source.PlayOneShot(clipBlue,0.5f);  
             }
             else if (i == 2) // Green
             {
                 StartCoroutine(Green.instance.Color(TimeToLight));
+                source.PlayOneShot(clipGreen,0.5f);  
             }
             else if (i == 3) // Yellow
             {
                 StartCoroutine(Yellow.instance.Color(TimeToLight));
+                source.PlayOneShot(clipYellow,0.5f);  
             }
             else if (i == 4)//Red
             {
                 StartCoroutine(Red.instance.Color(TimeToLight));
+                source.PlayOneShot(clipRed,0.5f);  
             }
             else if (i == 5)//Cyan
             {
                 StartCoroutine(Cyan.instance.Color(TimeToLight));
+                source.PlayOneShot(clipCyan,0.5f);  
             }
             else if (i == 6)//Purple
             {
                 StartCoroutine(Purple.instance.Color(TimeToLight));
+                source.PlayOneShot(clipPurple,0.5f);  
             }
             yield return new WaitForSeconds(tempsEntreCouleurs);
         }

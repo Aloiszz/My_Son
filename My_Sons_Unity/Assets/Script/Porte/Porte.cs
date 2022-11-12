@@ -45,13 +45,22 @@ public class Porte : MonoBehaviour
     void Door()
     {
         StartCoroutine(Wait());
+        
     }
 
+    private bool verif;
     IEnumerator Wait()
     {
         Simon.instance.canSpace = false;
         yield return new WaitForSeconds(WaitTimePoigner);
         Cam.instance.UnderTheDoor(true);
+
+        if (!verif)
+        {
+            verif = true;
+            EventManager.instance.isSimonExcite = true;
+        }
+        
         yield return new WaitForSeconds(WaitTimeUnderTheDoor);
         Cam.instance.UnderTheDoor(false);
         yield return new WaitForSeconds(WaitTimeLeaveDoor);

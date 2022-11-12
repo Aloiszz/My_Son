@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSimonSlow: 0
-  isSimonExcite: 1
+  isSimonExcite: 0
   TimeToLight: 0.2
 --- !u!4 &33496644
 Transform:
@@ -1188,8 +1188,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_Father: {fileID: 841168198}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &230742490
 GameObject:
@@ -2086,11 +2086,11 @@ Transform:
   m_GameObject: {fileID: 357113154}
   m_LocalRotation: {x: -0.7071068, y: 0.7071068, z: -0, w: 0}
   m_LocalPosition: {x: 4.93, y: -0.35, z: 4.6794}
-  m_LocalScale: {x: 1.4154, y: 1.4154, z: 1.4154}
+  m_LocalScale: {x: 1.4153999, y: 1.4153999, z: 1.4154001}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_Father: {fileID: 841168198}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: -90}
 --- !u!1 &394986603
 GameObject:
@@ -2776,8 +2776,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 0.20295}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_Father: {fileID: 841168198}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &457262999
 GameObject:
@@ -3540,12 +3540,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612848358}
   m_LocalRotation: {x: -0.46768752, y: -0.53034747, z: -0.46768752, w: 0.53034747}
-  m_LocalPosition: {x: -5.0899973, y: -0.0000019073486, z: -4.361148}
+  m_LocalPosition: {x: -5.0899973, y: 0, z: -4.361148}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_Father: {fileID: 841168198}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -82.815, y: -90, z: 0}
 --- !u!1 &622960410
 GameObject:
@@ -3834,8 +3834,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 0.61434}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_Father: {fileID: 841168198}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &626304649
 GameObject:
@@ -4435,12 +4435,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702157846}
   m_LocalRotation: {x: -0, y: -0.75002456, z: -0.66141003, w: 0}
-  m_LocalPosition: {x: 5.54, y: -0.000005722046, z: -4.016659}
+  m_LocalPosition: {x: 5.54, y: 0, z: -4.016659}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_Father: {fileID: 841168198}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -82.815, y: -180, z: 0}
 --- !u!1 &784009965
 GameObject:
@@ -4811,6 +4811,16 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 354880012}
+  - {fileID: 702157852}
+  - {fileID: 612848364}
+  - {fileID: 213595740}
+  - {fileID: 1170252438}
+  - {fileID: 1754514252}
+  - {fileID: 357113160}
+  - {fileID: 417604740}
+  - {fileID: 622960416}
+  - {fileID: 1282332581}
+  - {fileID: 1475775266}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6119,7 +6129,7 @@ MonoBehaviour:
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
-  m_SelectedVertices: 02000000
+  m_SelectedVertices: 
 --- !u!4 &1170252438
 Transform:
   m_ObjectHideFlags: 0
@@ -6132,8 +6142,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_Father: {fileID: 841168198}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1181504160
 Mesh:
@@ -7072,8 +7082,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_Father: {fileID: 841168198}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1326613622
 PrefabInstance:
@@ -7946,13 +7956,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475775260}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0.7071068, w: 0}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: 0.7071068, w: 0}
   m_LocalPosition: {x: -6.22, y: 7.966, z: 4.68}
-  m_LocalScale: {x: 1.7382, y: 1, z: 2.0891}
+  m_LocalScale: {x: 1.7382001, y: 1, z: 2.0891}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_Father: {fileID: 841168198}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 180}
 --- !u!1 &1498927086
 GameObject:
@@ -8965,8 +8975,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_Father: {fileID: 841168198}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1758117115
 GameObject:
@@ -10041,7 +10051,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &2070676382
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10146,7 +10156,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070676381}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.029000044, y: 3.4564571, z: -0.19800001}
+  m_LocalPosition: {x: 0, y: 3.4564571, z: 0}
   m_LocalScale: {x: 1, y: 3.954757, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10284,6 +10294,13 @@ MonoBehaviour:
   enterInSimon: 0
   canClick: 0
   canSpace: 0
+  source: {fileID: 2070676382}
+  clipBlue: {fileID: 8300000, guid: 0884f251b67266e4fb29a2e14dc7a9d6, type: 3}
+  clipGreen: {fileID: 8300000, guid: eb8c25834da765d4ab158e06f1ded355, type: 3}
+  clipYellow: {fileID: 8300000, guid: b0779e3d8a1b57b40a8b78a25dcfc82c, type: 3}
+  clipRed: {fileID: 8300000, guid: daa115d1f6607fa438c182c4896fc034, type: 3}
+  clipCyan: {fileID: 8300000, guid: 21e68d8d09c8ac3448df409a3261ce85, type: 3}
+  clipPurple: {fileID: 8300000, guid: 430111364f721c04bac3fc7554889c79, type: 3}
 --- !u!43 &2080805958
 Mesh:
   m_ObjectHideFlags: 0

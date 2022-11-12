@@ -70,34 +70,40 @@ public class Raycast : MonoBehaviour
             {
                 Simon.instance.WrittingList.Add(1);
                 Blue.instance.OnClicked();
+                Simon.instance.source.PlayOneShot(Simon.instance.clipBlue);
             }
 
             else if (hit.transform.name == "Btn_Green")
             {
                 Simon.instance.WrittingList.Add(2);
                 Green.instance.OnClicked();
+                Simon.instance.source.PlayOneShot(Simon.instance.clipGreen);
             }
                 
             else if (hit.transform.name == "Btn_Yellow")
             {
                 Simon.instance.WrittingList.Add(3);
                 Yellow.instance.OnClicked();
+                Simon.instance.source.PlayOneShot(Simon.instance.clipYellow);
             }
                 
             else if (hit.transform.name == "Btn_Red")
             {
                 Simon.instance.WrittingList.Add(4);
                 Red.instance.OnClicked();
+                Simon.instance.source.PlayOneShot(Simon.instance.clipRed);
             }
             else if (hit.transform.name == "Btn_Cyan")
             {
                 Simon.instance.WrittingList.Add(5);
                 Cyan.instance.OnClicked();
+                Simon.instance.source.PlayOneShot(Simon.instance.clipCyan);
             }
             else if (hit.transform.name == "Btn_Purple")
             {
                 Simon.instance.WrittingList.Add(6);
                 Purple.instance.OnClicked();
+                Simon.instance.source.PlayOneShot(Simon.instance.clipPurple);
             }
         }
     }
