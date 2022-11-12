@@ -41,7 +41,8 @@ public class Simon : MonoBehaviour
     public AudioClip clipRed;
     public AudioClip clipCyan;
     public AudioClip clipPurple;
-    public AudioClip clipPetageDeCable;
+    public AudioClip clipSimonExcite_1;
+    public AudioClip clipSimonExcite_2;
     public AudioClip clipRespiration;
     public AudioClip clipEnd;
     

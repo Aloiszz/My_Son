@@ -142,7 +142,7 @@ public class Cam : MonoBehaviour
         }
         else
         {
-            Simon.instance.source.PlayOneShot(Simon.instance.clipPetageDeCable, 0.5f);
+            Simon.instance.source.PlayOneShot(Simon.instance.clipSimonExcite_1, 0.5f);
             camSousPorteLookSimon.Priority = 10;
             camSousPorte.Priority = 5;
         }

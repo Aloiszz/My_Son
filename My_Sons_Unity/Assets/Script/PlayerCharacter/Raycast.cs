@@ -52,6 +52,7 @@ public class Raycast : MonoBehaviour
                     Simon.instance.enterInSimon = true;
                     Cam.instance.enterTheSimon(true);
                     Simon.instance.tourDeJeuActuel = 0;
+                    Simon.instance.source.Stop();
                     EventManager.instance.StopAllCoroutines();
                     MinEmissive();
                     StartCoroutine(WaitToPlay());
