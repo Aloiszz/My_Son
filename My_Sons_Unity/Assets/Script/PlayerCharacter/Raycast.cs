@@ -51,6 +51,7 @@ public class Raycast : MonoBehaviour
                 {
                     Simon.instance.enterInSimon = true;
                     Cam.instance.enterTheSimon(true);
+                    Simon.instance.tourDeJeuActuel = 0;
                     EventManager.instance.StopAllCoroutines();
                     MinEmissive();
                     StartCoroutine(WaitToPlay());
@@ -118,12 +119,19 @@ public class Raycast : MonoBehaviour
         }
     }
 
+    private bool doOnce;
     void RaycastPorte()
     {
         if (hit.transform.name == "Porte")
         {
-            Cam.instance.TouchingTheDoor(true);
-            Porte.instance.touchedDoor = true;
+            if (!doOnce)
+            {
+                Simon.instance.canSpace = false;
+                Cam.instance.TouchingTheDoor(true);
+                Porte.instance.touchedDoor = true;
+                Porte.instance.Door();
+                doOnce = true;
+            }
         }
     }
     

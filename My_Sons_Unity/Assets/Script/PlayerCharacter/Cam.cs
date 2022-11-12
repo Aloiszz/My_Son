@@ -142,7 +142,7 @@ public class Cam : MonoBehaviour
         }
         else
         {
-            //Simon.instance.source.PlayOneShot(Simon.instance.clipPetageDeCable, 0.5f);
+            Simon.instance.source.PlayOneShot(Simon.instance.clipPetageDeCable, 0.5f);
             camSousPorteLookSimon.Priority = 10;
             camSousPorte.Priority = 5;
         }
@@ -152,6 +152,7 @@ public class Cam : MonoBehaviour
     {
         camPlayer.Priority = 10;
         camSousPorteLookSimon.Priority = 5;
+        camSousPorte.Priority = 5;
         
         if (!verif)
         {
@@ -161,6 +162,7 @@ public class Cam : MonoBehaviour
 
         PlayerMovement.instance.enabled = true;
         RotationController.instance.enabled = true;
+        
     }
 
 
