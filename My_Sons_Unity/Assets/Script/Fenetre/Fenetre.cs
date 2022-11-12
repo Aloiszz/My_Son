@@ -33,4 +33,16 @@ public class Fenetre : MonoBehaviour
     {
         
     }
+    
+    private bool verif;
+    public IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(6);
+        if (!verif)
+        {
+            verif = true;
+            EventManager.instance.isSimonExcite = true;
+            EventManager.instance.isSimonComplique = true;
+        }
+    }
 }

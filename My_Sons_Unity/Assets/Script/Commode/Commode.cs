@@ -44,11 +44,17 @@ public class Commode : MonoBehaviour
         
     }
     
-    
+    private bool verif;
     IEnumerator Wait()
     {
         Simon.instance.canSpace = false;
         yield return new WaitForSeconds(waitTimeCommode);
+        if (!verif)
+        {
+            verif = true;
+            EventManager.instance.isSimonExcite = true;
+            EventManager.instance.isSimonEND = true;
+        }
         
         Simon.instance.canSpace = true;
     }

@@ -117,6 +117,7 @@ public class Raycast : MonoBehaviour
         if (hit.transform.name == "Fenetre")
         {
             Cam.instance.enterTheWindow(true);
+            Fenetre.instance.StartCoroutine(Fenetre.instance.Wait());
         }
     }
 

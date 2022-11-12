@@ -110,6 +110,8 @@ public class EventManager : MonoBehaviour
         {
             Simon.instance.tempsEntreCouleurs = Random.Range(.5f,3);
             Simon.instance.TimeToLight = Random.Range(1, 4);
+            
+            Linear.instance.isFenetreVisible = true;
         }
         else
         {
