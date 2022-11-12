@@ -240,6 +240,7 @@ MonoBehaviour:
   vec: {x: 0, y: 191, z: 71, w: 0}
   minEmissive: 0.05
   maxEmissive: 0.5
+  TimeToLight: 0.2
 --- !u!1 &33496641
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,6 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CG_Space: {fileID: 1758117117}
+  CG_Crosshair: {fileID: 0}
 --- !u!114 &33496643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,6 +285,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 324b58e666ce1704a8c628f95ee17d30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSimonSlow: 0
+  isSimonExcite: 0
+  TimeToLight: 0.35
 --- !u!4 &33496644
 Transform:
   m_ObjectHideFlags: 0
@@ -728,6 +733,7 @@ MonoBehaviour:
   vec: {x: 191, y: 180, z: 0, w: 0}
   minEmissive: 0.05
   maxEmissive: 0.5
+  TimeToLight: 0.2
 --- !u!1 &235736691
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,6 +851,7 @@ MonoBehaviour:
   vec: {x: 0, y: 11, z: 191, w: 0}
   minEmissive: 0.05
   maxEmissive: 0.5
+  TimeToLight: 0.2
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,8 +930,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.015000045, y: 1.6149998, z: -1.559}
+  m_LocalRotation: {x: -0.11693394, y: -0.67011714, z: 0.10805773, w: -0.72497797}
+  m_LocalPosition: {x: -4.43, y: 2.741269, z: 0.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1114,6 +1121,7 @@ MonoBehaviour:
   vec: {x: 0, y: 191, z: 6, w: 0}
   minEmissive: 0.05
   maxEmissive: 0.5
+  TimeToLight: 0.2
 --- !u!1 &345464600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,6 +1367,7 @@ MonoBehaviour:
   vec: {x: 58, y: 0, z: 191, w: 0}
   minEmissive: 0.05
   maxEmissive: 0.5
+  TimeToLight: 0.2
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,6 +1655,77 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe826908434ece04d996516552450f16, type: 3}
+--- !u!1 &578007908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 578007910}
+  - component: {fileID: 578007909}
+  m_Layer: 0
+  m_Name: CM vcam1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &578007909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578007908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ExcludedPropertiesInInspector:
+  - m_Script
+  m_LockStageInInspector: 
+  m_StreamingVersion: 20170927
+  m_Priority: 15
+  m_StandbyUpdate: 2
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
+  m_Lens:
+    FieldOfView: 70
+    OrthographicSize: 10
+    NearClipPlane: 0.1
+    FarClipPlane: 5000
+    Dutch: 0
+    ModeOverride: 0
+    LensShift: {x: 0, y: 0}
+    GateFit: 2
+    m_SensorSize: {x: 1, y: 1}
+  m_Transitions:
+    m_BlendHint: 0
+    m_InheritPosition: 0
+    m_OnCameraLive:
+      m_PersistentCalls:
+        m_Calls: []
+  m_LegacyBlendHint: 0
+  m_ComponentOwner: {fileID: 1004566580}
+--- !u!4 &578007910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578007908}
+  m_LocalRotation: {x: -0.11693394, y: -0.67011714, z: 0.10805773, w: -0.72497797}
+  m_LocalPosition: {x: -4.43, y: 2.741269, z: 0.53}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1004566580}
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &588624857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1928,8 +2008,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camPlayer: {fileID: 824881704}
+  camLookSimon: {fileID: 0}
   camSimon: {fileID: 82402608}
   camFenetre: {fileID: 588624859}
+  camPorte: {fileID: 0}
+  camSousPorte: {fileID: 0}
+  camSousPorteLookSimon: {fileID: 0}
   raycast: {fileID: 1986601007}
   pos: {fileID: 784009965}
   head: {fileID: 893795280}
@@ -2505,6 +2589,7 @@ MonoBehaviour:
   vec: {x: 0, y: 11, z: 191, w: 0}
   minEmissive: 0.05
   maxEmissive: 0.5
+  TimeToLight: 0.2
 --- !u!1 &893795280
 GameObject:
   m_ObjectHideFlags: 0
@@ -2681,7 +2766,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e183d5f499fba2d4ca939dcd62525dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Crosshair: {fileID: 1219673863}
   Collider:
   - {fileID: 1190394937}
 --- !u!135 &977725861
@@ -2697,6 +2781,101 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.89
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1004566579
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1004566580}
+  - component: {fileID: 1004566583}
+  - component: {fileID: 1004566582}
+  - component: {fileID: 1004566581}
+  m_Layer: 0
+  m_Name: cm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1004566580
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004566579}
+  m_LocalRotation: {x: 0.11693394, y: 0.67011714, z: -0.10805773, w: -0.72497797}
+  m_LocalPosition: {x: -1.0036955, y: 4.367819, z: 21.909096}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 578007910}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1004566581
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004566579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BindingMode: 1
+  m_FollowOffset: {x: 0, y: 0, z: -10}
+  m_XDamping: 1
+  m_YDamping: 1
+  m_ZDamping: 1
+  m_AngularDampingMode: 0
+  m_PitchDamping: 0
+  m_YawDamping: 0
+  m_RollDamping: 0
+  m_AngularDamping: 0
+--- !u!114 &1004566582
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004566579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
+  m_LookaheadTime: 0
+  m_LookaheadSmoothing: 0
+  m_LookaheadIgnoreY: 0
+  m_HorizontalDamping: 0.5
+  m_VerticalDamping: 0.5
+  m_ScreenX: 0.5
+  m_ScreenY: 0.5
+  m_DeadZoneWidth: 0
+  m_DeadZoneHeight: 0
+  m_SoftZoneWidth: 0.8
+  m_SoftZoneHeight: 0.8
+  m_BiasX: 0
+  m_BiasY: 0
+  m_CenterOnActivate: 1
+--- !u!114 &1004566583
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004566579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1075381411
 GameObject:
   m_ObjectHideFlags: 0
@@ -2845,6 +3024,7 @@ MonoBehaviour:
   vec: {x: 0, y: 191, z: 6, w: 0}
   minEmissive: 0.05
   maxEmissive: 0.5
+  TimeToLight: 0.2
 --- !u!1 &1116409525
 GameObject:
   m_ObjectHideFlags: 3
@@ -4401,6 +4581,7 @@ MonoBehaviour:
   vec: {x: 191, y: 0, z: 4, w: 0}
   minEmissive: 0.05
   maxEmissive: 0.5
+  TimeToLight: 0.2
 --- !u!1 &1881448010
 GameObject:
   m_ObjectHideFlags: 0
@@ -4518,6 +4699,7 @@ MonoBehaviour:
   vec: {x: 191, y: 0, z: 4, w: 0}
   minEmissive: 0.05
   maxEmissive: 0.5
+  TimeToLight: 0.2
 --- !u!1 &1889035490
 GameObject:
   m_ObjectHideFlags: 0
@@ -4563,7 +4745,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e183d5f499fba2d4ca939dcd62525dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Crosshair: {fileID: 1219673863}
   Collider:
   - {fileID: 8955009153140054500}
 --- !u!135 &1889035493
@@ -5341,6 +5522,8 @@ MonoBehaviour:
   tourDeJeu: 4
   NombreDeGameActuel: 0
   NombreDeGamePourExit: 3
+  tempsEntreCouleurs: 0.5
+  TimeToLight: 0.2
   coll: {fileID: 8955009153140054500}
   enterInSimon: 0
   canClick: 0
@@ -5571,6 +5754,7 @@ MonoBehaviour:
   vec: {x: 191, y: 180, z: 0, w: 0}
   minEmissive: 0.05
   maxEmissive: 0.5
+  TimeToLight: 0.2
 --- !u!33 &8821757800653270788
 MeshFilter:
   m_ObjectHideFlags: 0
