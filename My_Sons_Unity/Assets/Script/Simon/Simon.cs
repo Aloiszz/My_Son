@@ -59,7 +59,11 @@ public class Simon : MonoBehaviour
     private void Start()
     {
         //coll = GetComponent<BoxCollider>();
-        //Jouer();
+        Jouer();
+        Simon.instance.enterInSimon = true;
+        Cam.instance.enterTheSimon(true);
+        EventManager.instance.StopAllCoroutines();
+        
     }
     
     private void Update()

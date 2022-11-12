@@ -59,12 +59,17 @@ public class Porte : MonoBehaviour
         {
             verif = true;
             EventManager.instance.isSimonExcite = true;
+            EventManager.instance.isSimonComplique = true;
         }
         
         yield return new WaitForSeconds(WaitTimeUnderTheDoor);
+        
         Cam.instance.UnderTheDoor(false);
+        
         yield return new WaitForSeconds(WaitTimeLeaveDoor);
+        
         Cam.instance.LeaveDoor();
+        
         touchedDoor = false;
         Simon.instance.canSpace = true;
     }
