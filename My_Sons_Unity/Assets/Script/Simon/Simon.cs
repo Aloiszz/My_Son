@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -62,11 +63,17 @@ public class Simon : MonoBehaviour
     private void Start()
     {
         //coll = GetComponent<BoxCollider>();
+        Cam.instance.enterTheSimon(true);
+        CanvasManager.instance.CG_Panel.DOFade(0, 2).SetEase(Ease.InQuint);
+        StartCoroutine(StartTheGame());
+    }
+
+    IEnumerator StartTheGame()
+    {
+        yield return new WaitForSeconds(2f);
         Jouer();
         Simon.instance.enterInSimon = true;
-        Cam.instance.enterTheSimon(true);
         EventManager.instance.StopAllCoroutines();
-        
     }
     
     private void Update()
@@ -75,6 +82,7 @@ public class Simon : MonoBehaviour
         {
             CanvasManager.instance.SpaceUiVisible(true);
             canSpace = true;
+            
         }
         else
         {
@@ -113,7 +121,6 @@ public class Simon : MonoBehaviour
             {
                 EventManager.instance.SimonDevientLent(true);
             }
-            Debug.Log("ici");
         }
         NombreDeGameActuel++;
         StartCoroutine(AfficheColor());
@@ -172,7 +179,6 @@ public class Simon : MonoBehaviour
         {
             if (WrittingList[i] != ChosenColor[i]) // perdu
             {
-                Debug.Log("perdu");
                 ChosenColor.Clear();
                 WrittingList.Clear();
                 tourDeJeuActuel = 0;

@@ -57,11 +57,7 @@ public class EventManager : MonoBehaviour
             }
         }
 
-        if (isSimonEND)
-        {
-            SimonEND();
-            isSimonEND = false;
-        }
+        
         
 
         if (isSimonComplique)
@@ -184,6 +180,7 @@ public class EventManager : MonoBehaviour
 
     IEnumerator Walk()
     {
+        yield return new WaitForSeconds(2);
         piedDuDaron[0].SetActive(true);
         yield return new WaitForSeconds(TimeForFoot);
         piedDuDaron[0].SetActive(false);
