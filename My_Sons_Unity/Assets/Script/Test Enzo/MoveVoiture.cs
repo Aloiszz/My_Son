@@ -5,7 +5,7 @@ using DG.Tweening;
 
 public class MoveVoiture : MonoBehaviour
 {
-    public float speed = 1;
+    public float speed = 6;
     public Transform target;
 
     public static MoveVoiture instance;
@@ -31,6 +31,6 @@ public class MoveVoiture : MonoBehaviour
 
     public void MoveObject()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target.position, speed);
+        transform.DOMove(target.transform.position, 10);
     }
 }
