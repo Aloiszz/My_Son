@@ -26,6 +26,9 @@ public class Cam : MonoBehaviour
     public CinemachineVirtualCamera camSousPorte;
     public CinemachineVirtualCamera camSousPorteLookSimon;
     
+    [Header("Commode")]
+    public CinemachineVirtualCamera camCommode;
+    
     [Header("" +
             "" +
             "-------------" +
@@ -157,5 +160,28 @@ public class Cam : MonoBehaviour
 
         PlayerMovement.instance.enabled = true;
         RotationController.instance.enabled = true;
+    }
+
+
+
+
+    public void EnterLaCommode(bool verif)
+    {
+        if (verif)
+        {
+            camCommode.Priority = 10;
+            camPlayer.Priority = 5;
+            
+            PlayerMovement.instance.enabled = false;
+            RotationController.instance.enabled = false;
+        }
+        else
+        {
+            camCommode.Priority = 5;
+            camPlayer.Priority = 10;
+            
+            PlayerMovement.instance.enabled = true;
+            RotationController.instance.enabled = true;
+        }
     }
 }

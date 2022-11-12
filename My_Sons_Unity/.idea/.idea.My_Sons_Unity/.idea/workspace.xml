@@ -3,13 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9475af90-c1b4-4370-94c0-245674128855" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.My_Sons_Unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My_Sons_Unity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CinemachineBlenderSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CinemachineBlenderSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/GameManager/EventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GameManager/EventManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerCharacter/Cam.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/PlayerCharacter/Cam.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerCharacter/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/PlayerCharacter/PlayerInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerCharacter/Raycast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/PlayerCharacter/Raycast.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Simon/Simon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Simon/Simon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +16,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Script/Audio/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Commode/Commode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/GameManager/CanvasManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/PlayerCharacter/Cam.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/PlayerCharacter/Raycast.cs" root0="FORCE_HIGHLIGHTING" />
@@ -25,6 +24,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Script/Simon/Purple.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Simon/Simon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Simon/SphereCollider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.7/Runtime/Debugging/DebugManager.Actions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -92,7 +92,7 @@
       <updated>1668118187254</updated>
       <workItem from="1668118190446" duration="9556000" />
       <workItem from="1668153639291" duration="6399000" />
-      <workItem from="1668163309830" duration="39003000" />
+      <workItem from="1668163309830" duration="40760000" />
     </task>
     <servers />
   </component>

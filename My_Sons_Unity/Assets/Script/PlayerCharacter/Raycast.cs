@@ -58,6 +58,7 @@ public class Raycast : MonoBehaviour
                 RaycastSimon();
                 RaycastFenetre();
                 RaycastPorte();
+                RaycastCommode();
             }
         }
     }
@@ -123,6 +124,15 @@ public class Raycast : MonoBehaviour
         {
             Cam.instance.TouchingTheDoor(true);
             Porte.instance.touchedDoor = true;
+        }
+    }
+    
+    void RaycastCommode()
+    {
+        if (hit.transform.name == "Commode")
+        {
+            Cam.instance.EnterLaCommode(true);
+            Commode.instance.touchedCommode = true;
         }
     }
 

@@ -54,6 +54,8 @@ public class PlayerInput : MonoBehaviour
             
             
             Cam.instance.enterTheWindow(false);
+            
+            Cam.instance.EnterLaCommode(false);
         }
         
     }
