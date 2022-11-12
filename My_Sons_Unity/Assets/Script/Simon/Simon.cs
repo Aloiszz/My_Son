@@ -6,16 +6,21 @@ using Random = UnityEngine.Random;
 
 public class Simon : MonoBehaviour
 {
+    
+     [Header("List")]
     public List<int> colorList;
-
     public List<int> ChosenColor;
     public List<int> WrittingList;
 
+    [Header("Regles")]
     public int tourDeJeu = 4;
-
     public int NombreDeGameActuel = 0;
     public int NombreDeGamePourExit = 3;
 
+    
+    [Header("Timing")]
+    public float tempsEntreCouleurs = 0.5f;
+    public float TimeToLight = 0.2f;
     
 
     public BoxCollider coll;
@@ -86,11 +91,14 @@ public class Simon : MonoBehaviour
         {
             var k = Random.Range(1,6);
             ChosenColor.Add(k);
-            
+            if (EventManager.instance.isSimonSlow)
+            {
+                EventManager.instance.SimonDevientLent();
+            }
         }
-
         NombreDeGameActuel++;
         StartCoroutine(AfficheColor());
+        
     }
 
     IEnumerator AfficheColor()
@@ -102,29 +110,29 @@ public class Simon : MonoBehaviour
 
             if (i == 1) //blue
             {
-                StartCoroutine(Blue.instance.Color());
+                StartCoroutine(Blue.instance.Color(TimeToLight));
             }
             else if (i == 2) // Green
             {
-                StartCoroutine(Green.instance.Color());
+                StartCoroutine(Green.instance.Color(TimeToLight));
             }
             else if (i == 3) // Yellow
             {
-                StartCoroutine(Yellow.instance.Color());
+                StartCoroutine(Yellow.instance.Color(TimeToLight));
             }
             else if (i == 4)//Red
             {
-                StartCoroutine(Red.instance.Color());
+                StartCoroutine(Red.instance.Color(TimeToLight));
             }
             else if (i == 5)//Cyan
             {
-                StartCoroutine(Cyan.instance.Color());
+                StartCoroutine(Cyan.instance.Color(TimeToLight));
             }
             else if (i == 6)//Purple
             {
-                StartCoroutine(Purple.instance.Color());
+                StartCoroutine(Purple.instance.Color(TimeToLight));
             }
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(tempsEntreCouleurs);
         }
         canClick = true;
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,9 @@ public class Cyan : MonoBehaviour
     public Vector4 vec = new Vector4(0,191,71);
     public float minEmissive = 0.05f;
     public float maxEmissive = 0.5f;
+
+    [Header("Timing")] 
+    public float TimeToLight = 0.2f;
     
     public static Cyan instance;
     private void Awake()
@@ -28,19 +32,23 @@ public class Cyan : MonoBehaviour
         } 
     }
 
+    public void MinEmissive()
+    {
+        color.SetVector("_EmissionColor", vec * minEmissive);
+    }
 
 
     public void OnClicked()
     {
         gameObject.transform.DOMove(new Vector3(EndPos.transform.position.x, EndPos.transform.position.y, EndPos.transform.position.z), 0.2f).OnComplete(()=>ComeBack());
-        StartCoroutine(Color());
+        StartCoroutine(Color(TimeToLight));
     }
 
 
-    public IEnumerator Color()
+    public IEnumerator Color(float time)
     {
         color.SetVector("_EmissionColor", vec * maxEmissive);
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(time);
         color.SetVector("_EmissionColor", vec * minEmissive);
     }
     void ComeBack()

@@ -60,3 +60,50 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 0
+  - m_From: CM DessousDePorte
+    m_To: CM DessousPorteLookSimon
+    m_Blend:
+      m_Style: 1
+      m_Time: 1
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0.012286869
+          inSlope: 1.8337556
+          outSlope: 1.8337556
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.25944933
+          value: 0.48805353
+          inSlope: -0.06651924
+          outSlope: -0.06651924
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 1
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.754005
+          value: 0.7885875
+          inSlope: -0.046544038
+          outSlope: -0.046544038
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 1
+        - serializedVersion: 3
+          time: 1
+          value: 0.99999994
+          inSlope: 0.8594176
+          outSlope: 0.8594176
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 0
