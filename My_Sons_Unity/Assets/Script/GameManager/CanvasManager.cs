@@ -8,6 +8,7 @@ public class CanvasManager : MonoBehaviour
     public CanvasGroup CG_Space;
     public CanvasGroup CG_Crosshair;
     public CanvasGroup CG_Panel;
+    public CanvasGroup CG_Regles;
 
     
     public static CanvasManager instance;

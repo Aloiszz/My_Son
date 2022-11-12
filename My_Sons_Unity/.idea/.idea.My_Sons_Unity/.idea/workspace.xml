@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9475af90-c1b4-4370-94c0-245674128855" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.My_Sons_Unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My_Sons_Unity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene 2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/GameManager/EventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GameManager/EventManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/GameManager/Linear.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GameManager/Linear.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GameManager/CanvasManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GameManager/CanvasManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Simon/Simon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Simon/Simon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
