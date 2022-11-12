@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9475af90-c1b4-4370-94c0-245674128855" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.My_Sons_Unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My_Sons_Unity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerCharacter/Raycast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/PlayerCharacter/Raycast.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Simon/Cyan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Simon/Cyan.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Simon/Simon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Simon/Simon.cs" afterDir="false" />
-    </list>
+    <list default="true" id="9475af90-c1b4-4370-94c0-245674128855" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +37,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:/BuildJam\My_Sons_Unity.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../BuildJam\My_Sons_Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="D:\BuildJam" />
       <option name="PASS_PARENT_ENVS" value="1" />
