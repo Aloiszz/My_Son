@@ -364,9 +364,9 @@ MonoBehaviour:
   isFenetreVisible: 0
   isCommodeVisible: 0
   Porte: {fileID: 919132147524640561}
-  Fenetre: {fileID: 1190394935}
-  RemplaceFenetre: {fileID: 268712219}
-  Commode: {fileID: 919132148898157345}
+  Fenetre: {fileID: 0}
+  RemplaceFenetre: {fileID: 0}
+  Commode: {fileID: 0}
 --- !u!1 &39767248
 GameObject:
   m_ObjectHideFlags: 0
@@ -2859,7 +2859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &268712220
 Transform:
   m_ObjectHideFlags: 0
@@ -3207,8 +3207,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0, y: -0.6510864, z: 0, w: -0.7590037}
-  m_LocalPosition: {x: -1.287052, y: 1.6149998, z: 0.7290789}
+  m_LocalRotation: {x: 0, y: -0.7392882, z: 0, w: 0.6733892}
+  m_LocalPosition: {x: -2.0563798, y: 1.6149998, z: 0.61382985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6359,7 +6359,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670239471}
-  m_LocalRotation: {x: -0, y: -0.6510864, z: -0, w: -0.7590037}
+  m_LocalRotation: {x: -0, y: -0.7392882, z: -0, w: 0.6733892}
   m_LocalPosition: {x: -1.67, y: 1, z: 0.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6367,7 +6367,7 @@ Transform:
   - {fileID: 893795281}
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: -278.753, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -95.342, z: 0}
 --- !u!54 &670239479
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9672,7 +9672,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264552718}
-  m_LocalRotation: {x: -0.42667228, y: -0.075736165, z: 0.03588453, w: -0.90051496}
+  m_LocalRotation: {x: -0.01997952, y: 0.9025052, z: -0.42814904, w: -0.0421153}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10842,7 +10842,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465856648}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -15126,7 +15126,7 @@ MonoBehaviour:
   WrittingList: 
   tourDeJeu: 4
   tourDeJeuActuel: 0
-  NombreDeGameActuel: 0
+  NombreDeGameActuel: 4
   NombreDeGamePourExit: 3
   tempsEntreCouleurs: 1.1
   TimeToLight: 0.4
