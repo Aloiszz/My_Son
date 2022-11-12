@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
-
 public class Porte : MonoBehaviour
 {
+
+    
+    
     public bool touchedDoor;
     
     public GameObject CollisionCrosshair;
 
-    // public AudioSource audioSource;
+    //public AudioSource audioSource;
 
 
     [Header("Timing")]
@@ -32,6 +35,7 @@ public class Porte : MonoBehaviour
     void Start()
     {
 
+        
     }
 
     // Update is called once per frame
@@ -39,7 +43,8 @@ public class Porte : MonoBehaviour
     {
         if (touchedDoor)
         {
-            //audioSource.Play();
+            //Poignée.instance.Play();
+            Move.instance.MoveObject();
             Door();
             CollisionCrosshair.SetActive(false);
         }
@@ -48,7 +53,6 @@ public class Porte : MonoBehaviour
     void Door()
     {
         StartCoroutine(Wait());
-        
     }
 
     private bool verif;
@@ -57,6 +61,9 @@ public class Porte : MonoBehaviour
         Simon.instance.canSpace = false;
         yield return new WaitForSeconds(WaitTimePoigner);
         Cam.instance.UnderTheDoor(true);
+        
+        
+        //AudioSimon.instance.Play();
 
         if (!verif)
         {
@@ -64,12 +71,13 @@ public class Porte : MonoBehaviour
             EventManager.instance.isSimonExcite = true;
             EventManager.instance.isSimonComplique = true;
         }
-        
+
         yield return new WaitForSeconds(WaitTimeUnderTheDoor);
-        
+
         Cam.instance.UnderTheDoor(false);
         
         yield return new WaitForSeconds(WaitTimeLeaveDoor);
+
         
         Cam.instance.LeaveDoor();
         

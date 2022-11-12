@@ -42,6 +42,8 @@ public class Simon : MonoBehaviour
     public AudioClip clipCyan;
     public AudioClip clipPurple;
     public AudioClip clipPetageDeCable;
+    //public AudioClip start;
+    
 
     public static Simon instance;
     private void Awake()
